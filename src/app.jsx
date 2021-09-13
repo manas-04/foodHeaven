@@ -5,9 +5,9 @@ import {
     Route,
     Link
   } from "react-router-dom";
-import MainPage from "./mainPage/completeContent";
-import LoginPage from "./loginPage/loginPage";
-import RegisterPage from "./registerPage/registerPage";
+import MainPage from "./pages/mainPage/completeContent";
+import LoginPage from "./pages/loginPage/loginPage";
+import RegisterPage from "./pages/registerPage/registerPage";
 
 function App(){
     return <div>

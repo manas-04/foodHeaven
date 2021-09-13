@@ -1,0 +1,28 @@
+.movingComponent{
+    /* height: 10%; */
+    width: 30%;
+}
+
+.completePage{
+    display: flex;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+
+}
+
+.loginArea{
+    align-self: center;
+    margin-left: 100px;
+}
+
+.loginBtn{
+    background-color: rgb(26, 189, 21);
+    color: white;
+    border-color: rgb(26, 189, 21);
+    width: 200px;
+}
+
+.forgotPassLink{
+    text-align: end;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
