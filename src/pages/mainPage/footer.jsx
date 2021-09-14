@@ -5,8 +5,14 @@ function Footer(){
     
     let history = useHistory();
 
-    function clickHandler(){
-        history.push("/login");
+    function clickHandler(event){
+        const name = event.target.name;
+        // console.log(event);
+        if(name==="login"){
+            history.push("/login");
+        }else if(name==="register"){
+            history.push("/register");
+        }  
     }
 
     return (<footer className="localFooter">
@@ -25,10 +31,10 @@ function Footer(){
                 Community 
             </a>
             <div className="btnSection">
-                <button className="btn localBtn" onClick={clickHandler}> 
+                <button className="btn localBtn" name="login" onClick={clickHandler}> 
                     Log In
                 </button>
-                <button className="btn localBtn">
+                <button className="btn localBtn" name="register" onClick={clickHandler}>
                     Sign-Up
                 </button>
             </div>

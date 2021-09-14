@@ -17,12 +17,19 @@
 .loginBtn{
     background-color: rgb(26, 189, 21);
     color: white;
-    border-color: rgb(26, 189, 21);
-    width: 200px;
+    border-color: rgb(24, 173, 19);
+    width: 300px;
+    border-radius: 10px;
+    padding: 10px auto;
 }
 
 .forgotPassLink{
     text-align: end;
     margin-top: -10px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
+}
+
+.newAccountLink{
+    margin-top: 15px;
+    text-align: end;
 }

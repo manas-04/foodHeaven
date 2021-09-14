@@ -5,8 +5,14 @@ function NavBar(){
 
     let history = useHistory();
 
-    function clickHandler(){
-        history.push("/login");
+    function clickHandler(event){
+        const name = event.target.name;
+        // console.log(event);
+        if(name==="login"){
+            history.push("/login");
+        }else if(name==="register"){
+            history.push("/register");
+        }  
     }
 
     return (<nav className="navbar-expand-lg navbar-light localNavBar">
@@ -20,10 +26,10 @@ function NavBar(){
         <a className="nav-item localNavItem" href="">Contacts</a>
     </div>
     <div class="btnSection ml-auto">
-        <button className="btn localBtn" onClick = {clickHandler} > 
+        <button className="btn localBtn" name="login" onClick = {clickHandler} > 
             Log In
         </button>
-        <button className="btn localBtn">
+        <button className="btn localBtn" name="register" onClick = {clickHandler}> 
             Sign-Up
         </button>
         <button className="btn iconBtn ">

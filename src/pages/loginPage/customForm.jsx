@@ -1,8 +1,16 @@
 import React from "react";
 import { Form , Button } from "react-bootstrap";
+import { useHistory } from "react-router";
 import style from "./loginPage.module.css";
 
 function LoginForm(){
+
+    const history = useHistory();
+
+    function clickHandler(){
+        history.push("/register");
+    }
+
     return <Form>
 
     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -20,9 +28,18 @@ function LoginForm(){
     <div className={style.forgotPassLink}>
         <a href="" > Forgot Password? </a>
     </div>
-    <Button type="submit" className={style.loginBtn}>
-        Login Now
-    </Button>
+    <center>
+        <Button type="submit" className={style.loginBtn}>
+            Sign In
+        </Button>
+    </center>
+    <div className={style.newAccountLink}>
+        <p>   
+            Not Registered yet ? 
+            <a href= "" onClick={clickHandler}> Create an Account </a>
+        </p>
+        
+    </div>
   
 </Form>
 }

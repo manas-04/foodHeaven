@@ -1,0 +1,15 @@
+.formCard{
+    margin: 4% 20% 5% 20%;
+    padding: 2% 14% 2% 14%;
+    background-color: lightgray;
+    border-radius: 24px;
+}
+
+.registerBtn{
+    margin-top: 8px;
+    background-color: rgb(26, 189, 21);
+    color: white;
+    border-color: rgb(26, 189, 21);
+    border-radius: 10px;
+    width: 250px;
+}
