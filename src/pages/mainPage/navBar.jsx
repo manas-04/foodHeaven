@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-function NavBar(){
+function NavBar(props){
 
     let history = useHistory();
 
@@ -31,7 +31,7 @@ function NavBar(){
         <button className="btn localBtn" name="register" onClick = {clickHandler}> 
             Sign-Up
         </button>
-        <button className="btn iconBtn ">
+        <button className="btn iconBtn " onClick={props.changeVisibility}>
             <img src="./images/search.svg" />
         </button>
     </div>

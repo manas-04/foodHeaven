@@ -128,9 +128,9 @@ a:hover{
     vertical-align: middle;
     display: inline-block;
     height: 49px;
-    width: 70px;
+    width: 300px;
     background: white;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px 15px 15px 15px;
     margin-left: 40%;
     margin-top: 1px;
 }
@@ -156,4 +156,48 @@ a:hover{
     margin-top: 12px;
     margin-bottom:10px ;
     margin-right: 20px;
+}
+
+.searchMainDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    background: rgba(35,35,35,0.9);
+    color: cornsilk;
+    /* opacity: 0; 
+     visibility: hidden; */
+}
+
+.searchDiv{
+    background-color: rgb(226, 226, 226);
+    border-radius: 28px 28px 28px 28px;
+    padding: 15px 15px 0px 15px;
+}
+
+.searchIcon{
+    border-radius: 0px 20px 20px 0px;
+    color: black;
+}
+
+.searchInput{
+    border-radius: 20px 0px 0px 20px;
+}
+
+.closeDiv{
+    margin-bottom: -10px;
+    margin-left: 350px;
+}
+
+.closeDiv:hover{
+
+    color: cornsilk;
+    opacity: 0.6;
 }

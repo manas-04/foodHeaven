@@ -1,11 +1,18 @@
-import React from "react";
+import React ,{useState} from "react";
 import NavBar from "./navBar";
 import MainDiv from "./mainDiv";
 
 function CompleteContent(){
+
+    const [isVisible,setvisibility]= useState(false);
+
+    function changeVisibility(){
+        setvisibility(!isVisible);
+    }
+
     return (<div>
-        <NavBar />
-        <MainDiv />
+        <NavBar changeVisibility={changeVisibility}/>
+        <MainDiv visible={isVisible} changeVisibility={changeVisibility}/>
     </div>);
 }
 
