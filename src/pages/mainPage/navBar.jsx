@@ -7,7 +7,6 @@ function NavBar(){
 
     function clickHandler(event){
         const name = event.target.name;
-        // console.log(event);
         if(name==="login"){
             history.push("/login");
         }else if(name==="register"){

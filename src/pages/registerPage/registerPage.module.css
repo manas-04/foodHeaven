@@ -1,7 +1,6 @@
 .formCard{
-    margin: 4% 20% 5% 20%;
-    padding: 2% 14% 2% 14%;
-    background-color: lightgray;
+    padding: 2% 8% 1.5% 6%;
+    background-color: rgb(233, 232, 232);
     border-radius: 24px;
 }
 
@@ -12,4 +11,20 @@
     border-color: rgb(26, 189, 21);
     border-radius: 10px;
     width: 250px;
+}
+
+.image{
+    padding-top: 50px;
+    width: 380px;
+    height: 400px;
+}
+
+.page{
+    background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+    background-color:rgb(0, 162, 255);
+    padding: 3.5% 13% 5% 13%;
+}
+
+.form{
+    padding: 4% 30px 15px 70px;
 }

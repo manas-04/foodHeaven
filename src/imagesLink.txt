@@ -4,3 +4,5 @@ https://st.depositphotos.com/1761693/4692/i/950/depositphotos_46927675-stock-pho
 
 https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX17942677.jpg
 
+background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+

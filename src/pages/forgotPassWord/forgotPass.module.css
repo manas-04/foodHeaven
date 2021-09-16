@@ -1,0 +1,33 @@
+.formCard{
+    /* margin: 3.5% 13% 3.5% 13%; */
+    padding: 4% 6% 8% 5%;
+    background-color: lightgray;
+    border-radius: 24px;
+    height: 500px;
+}
+
+.page{
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-color:rgb(62, 180, 248);
+    padding: 3.5% 13% 5% 13%;
+}
+
+.forgotPassBtn{
+    margin-top: 8px;
+    background-color: rgb(26, 189, 21);
+    color: white;
+    border-color: rgb(26, 189, 21);
+    border-radius: 10px;
+    width: 250px;
+}
+
+.image{
+    margin-top: 4%;
+    height: 350px;
+    width: 350px;
+}
+
+.form{
+    padding: 8% 30px 10px 50px;
+}
+

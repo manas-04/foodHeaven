@@ -4,7 +4,7 @@ import SignUpForm from "./signUpForm";
 import styles from "./registerPage.module.css";
 
 function RegisterPage(){
-    return <div>
+    return <div className={styles.page}>
         <SignUpForm />
     </div>
 }

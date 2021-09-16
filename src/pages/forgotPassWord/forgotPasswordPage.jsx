@@ -1,7 +1,12 @@
 import React from "react";
 
+import FormAndSvg from "./formAndSvg";
+import styles from "./forgotPass.module.css";
+
 function ForgotPasswordPage(){
-    return <h1>Lets Do It</h1>
+    return <div className={styles.page}>
+    <FormAndSvg />
+    </div>
 }
 
 export default ForgotPasswordPage;

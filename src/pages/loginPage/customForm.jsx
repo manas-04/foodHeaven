@@ -7,8 +7,12 @@ function LoginForm(){
 
     const history = useHistory();
 
-    function clickHandler(){
+    function registerClickHandler(){
         history.push("/register");
+    }
+
+    function forgotPass(){
+        history.push("/forgotPassword");
     }
 
     return <Form>
@@ -26,7 +30,7 @@ function LoginForm(){
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>
     <div className={style.forgotPassLink}>
-        <a href="" > Forgot Password? </a>
+        <a href="" onClick={forgotPass} > Forgot Password? </a>
     </div>
     <center>
         <Button type="submit" className={style.loginBtn}>
@@ -36,7 +40,7 @@ function LoginForm(){
     <div className={style.newAccountLink}>
         <p>   
             Not Registered yet ? 
-            <a href= "" onClick={clickHandler}> Create an Account </a>
+            <a href= "" name="signUp" onClick={registerClickHandler}> Create an Account </a>
         </p>
         
     </div>
