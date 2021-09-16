@@ -8,7 +8,7 @@ import {
 import MainPage from "./pages/mainPage/completeContent";
 import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
-import ForgotPasswordPage from "./pages/forgotPassword/forgotPasswordPage";
+import ForgotPasswordPage from "./pages/forgotPassword/forgotPasswordPage"
 import SearchPage from "./pages/searchPage/searchPage";
 
 function App(){
