@@ -5,7 +5,7 @@ import styles from "./forgotPass.module.css";
 
 function ForgotPasswordPage(){
     return <div className={styles.page}>
-    <FormAndSvg />
+        <FormAndSvg />
     </div>
 }
 

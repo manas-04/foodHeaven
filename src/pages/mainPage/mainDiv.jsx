@@ -1,9 +1,20 @@
-import React ,{useState} from "react";
+import React, { useState }  from "react";
 import {Button,InputGroup,FormControl} from "react-bootstrap";
 
 import Footer from "./footer";
 
 function MainDiv(props){
+
+    const [search,setSearch] = useState("");
+
+    function inputHandler(event){
+        console.log(event.target.value);
+        setSearch(event.target.value);
+    }
+
+    function searchFormSubmission(event){
+        event.preventDefault();
+    }
 
     return(<div className="bodyDiv form-inline">  
             {
@@ -19,14 +30,21 @@ function MainDiv(props){
                     </div>
                 </div>
                     <div className="searchDiv">
-                        <form>
+                        <form onSubmit={searchFormSubmission}>
                             <InputGroup className="mb-3">
                                 <FormControl
+                                    onChange={inputHandler}
                                     style={{width:550+"px"}}
                                     className="searchInput"
                                     placeholder="Search"
+                                    value={search}
                                 />
-                                <Button id="button-addon1" variant="warning" className="searchIcon">
+                                <Button 
+                                    id="button-addon1" 
+                                    variant="warning" 
+                                    className="searchIcon"
+                                    type="submit"
+                                >
                                     <img src="./images/search.svg" />
                                 </Button>
                             </InputGroup>

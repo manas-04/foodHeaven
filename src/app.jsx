@@ -8,6 +8,7 @@ import MainPage from "./pages/mainPage/completeContent";
 import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
 import ForgotPasswordPage from "./pages/forgotPassword/forgotPasswordPage";
+import Dashboard from "./pages/dashboard/dashboard";
 
 function App(){
     return <div>
@@ -17,6 +18,7 @@ function App(){
                 <Route path="/login" component={LoginPage}/>
                 <Route path="/register" component={RegisterPage}/> 
                 <Route path="/forgotPassword" component={ForgotPasswordPage}/>
+                <Route path="/dashboard" component={Dashboard} />
             </Switch>
         </Router>
     </div>

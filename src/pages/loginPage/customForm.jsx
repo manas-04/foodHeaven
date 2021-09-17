@@ -5,16 +5,6 @@ import style from "./loginPage.module.css";
 
 function LoginForm(){
 
-    const history = useHistory();
-
-    function registerClickHandler(){
-        history.push("/register");
-    }
-
-    function forgotPass(){
-        history.push("/forgotPassword");
-    }
-
     return <Form>
 
     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -30,7 +20,7 @@ function LoginForm(){
         <Form.Control type="password" placeholder="Password" />
     </Form.Group>
     <div className={style.forgotPassLink}>
-        <a href="" onClick={forgotPass} > Forgot Password? </a>
+        <a href="/forgotPassword"> Forgot Password? </a>
     </div>
     <center>
         <Button type="submit" className={style.loginBtn}>
@@ -40,7 +30,7 @@ function LoginForm(){
     <div className={style.newAccountLink}>
         <p>   
             Not Registered yet ? 
-            <a href= "" name="signUp" onClick={registerClickHandler}> Create an Account </a>
+            <a href= "/register"> Create an Account </a>
         </p>
         
     </div>

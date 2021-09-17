@@ -5,13 +5,7 @@ import { useHistory } from "react-router";
 import styles from "./registerPage.module.css";
 
 function SignUpForm(){
-
-    const history = useHistory();
-
-    function clickHandler(){
-        history.push("/login");
-    }
-
+    
     return <center className={styles.formCard} >
     <div style={{display:"inline-flex"}}>
         <img src="images/mobile-login-animate.svg" className={styles.image}/>
@@ -46,7 +40,7 @@ function SignUpForm(){
 
                 <p style={{paddingTop:10+"px"}}>
                     Already Have an account ? 
-                    <a href=" " onClick={clickHandler}> Sign In</a>
+                    <a href="/login"> Sign In</a>
                 </p>
 
             </Form>

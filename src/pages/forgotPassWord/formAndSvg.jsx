@@ -6,12 +6,6 @@ import styles from "./forgotPass.module.css";
 
 function FormAndSvg(){
 
-    const history = useHistory();
-
-    function clickHandler(){
-        history.push("/register");
-    }
-
     return <center className={styles.formCard}>
         <div style={{display:"inline-flex"}}>
             <img src="images/forgot-password-animate.svg" className={styles.image} />
@@ -31,7 +25,7 @@ function FormAndSvg(){
                 </Button>
 
                 <p style={{marginTop:12+"px"}}>Don't have an account ? 
-                    <a href="" onClick={clickHandler}> Sign Up</a>
+                    <a href="/register"> Sign Up</a>
                 </p>
             </div>
         </div>
