@@ -16,7 +16,7 @@ function MainDiv(props){
         event.preventDefault();
     }
 
-    return(<div className="bodyDiv form-inline">  
+    return(<div className="bodyDiv">  
             {
             props.visible
             ?<div className="searchMainDiv">
