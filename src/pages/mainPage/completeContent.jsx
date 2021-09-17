@@ -12,11 +12,9 @@ function CompleteContent(){
 
     return (<div>
         <NavBar changeVisibility={changeVisibility}/>
-        <div className="center">
         <center>
             <MainDiv visible={isVisible} changeVisibility={changeVisibility}/>
         </center>
-        </div>
     </div>);
 }
 
