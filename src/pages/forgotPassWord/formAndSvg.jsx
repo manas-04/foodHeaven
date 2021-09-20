@@ -1,6 +1,5 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import { useHistory } from "react-router";
 
 import styles from "./forgotPass.module.css";
 
