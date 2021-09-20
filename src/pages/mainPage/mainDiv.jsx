@@ -1,5 +1,6 @@
 import React, { useState }  from "react";
 import {Button,InputGroup,FormControl} from "react-bootstrap";
+import axios from "axios";
 
 import Footer from "./footer";
 
@@ -8,12 +9,23 @@ function MainDiv(props){
     const [search,setSearch] = useState("");
 
     function inputHandler(event){
-        console.log(event.target.value);
         setSearch(event.target.value);
     }
 
     function searchFormSubmission(event){
+
+        const apiKey="6f740b27bc614232818aa14e3d14cc43";
+        
         event.preventDefault();
+
+        axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + search + "&apiKey=" + apiKey)
+        .then(res => {
+            console.log(res.data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
     }
 
     return(<div className="bodyDiv">  
@@ -50,7 +62,7 @@ function MainDiv(props){
                             </InputGroup>
                         </form>
                     </div>
-                </div>
+                </div> 
             :<div><h1 className="mainHeading">Welcome to the Home of Delicious Recipes</h1>
                 <form>
                     <button className="bodySearchBtn btn" onClick={props.changeVisibility}>

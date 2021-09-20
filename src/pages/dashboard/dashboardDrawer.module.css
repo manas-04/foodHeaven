@@ -1,11 +1,38 @@
 .sideDrawer{
-    width: 15%;
+    width: 18%;
     background-color: lightgrey;
     height: 100%;
+    padding-bottom: 1.5%;
 }
 
 .title{
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 0px;
+    margin-bottom: 16px;
+    color: #484A4F;
+    display: inline-flex;
+}
+
+.hr{
+    left: -0.78%;
+    right: 0.78%;
+    top: 61.72%;
+    margin-bottom: 3px;
+    border: 1px solid #238BF4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sideDrawerImages{
+    margin-right: 5px;
+    margin-top: -3px;
+    padding-left: 13px;
+    padding-right: 5px;
+}
+
+.sideDrawerText{
+    color: #484A4F;
+    font-weight: 500;
+    margin-top: 0px;
+    padding-bottom: 7px;
+    padding-top: 7px;
 }
