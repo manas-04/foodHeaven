@@ -1,0 +1,17 @@
+.card{
+    padding: 30px ;
+    padding-bottom: 20px;
+    /* margin: 10px; */
+    border-radius: 20px;
+}
+
+.card:hover{
+    background-color: rgb(236, 236, 236);
+    cursor: pointer;
+}
+
+.title{
+    padding-top: 10px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
