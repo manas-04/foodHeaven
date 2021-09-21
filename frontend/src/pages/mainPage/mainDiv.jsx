@@ -1,12 +1,14 @@
 import React, { useState }  from "react";
 import {Button,InputGroup,FormControl} from "react-bootstrap";
 import axios from "axios";
+import { useHistory,Redirect, Link } from "react-router-dom";
 
 import Footer from "./footer";
 
 function MainDiv(props){
 
     const [search,setSearch] = useState("");
+    const history = useHistory();
 
     function inputHandler(event){
         setSearch(event.target.value);
@@ -15,12 +17,23 @@ function MainDiv(props){
     function searchFormSubmission(event){
 
         const apiKey="6f740b27bc614232818aa14e3d14cc43";
-        
         event.preventDefault();
 
-        axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + search + "&apiKey=" + apiKey)
+        axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + search + "&apiKey=" + apiKey + "&number=20")
         .then(res => {
-            console.log(res.data);
+            // console.log(res);
+            history
+                .push("/search", {
+                    searchedItem:search,
+                    itemsArray:res.data,
+                });
+                // if(res.status === 200 ){
+                //     return <Redirect 
+                //         to={{
+                //             pathname:"/search",
+                //         }}
+                //     />
+                // } 
         })
         .catch(error => {
             console.log(error);
