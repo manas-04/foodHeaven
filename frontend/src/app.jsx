@@ -9,6 +9,7 @@ import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
 import ForgotPasswordPage from "./pages/forgotPassword/forgotPasswordPage";
 import Dashboard from "./pages/dashboard/dashboard";
+import SearchPage from "./pages/searchRecipePage/searchRecipe";
 
 function App(){
     return <div>
@@ -19,6 +20,7 @@ function App(){
                 <Route path="/register" component={RegisterPage}/> 
                 <Route path="/forgotPassword" component={ForgotPasswordPage}/>
                 <Route path="/dashboard" component={Dashboard} />
+                <Route path="/search" render={(props)=><SearchPage {...props} />} />
             </Switch>
         </Router>
     </div>

@@ -1,19 +1,23 @@
 import React, { useState }  from "react";
 import {Button,InputGroup,FormControl} from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 import Footer from "./footer";
 
 function MainDiv(props){
 
     const [search,setSearch] = useState("");
+    const history = useHistory();
 
     function inputHandler(event){
-        console.log(event.target.value);
         setSearch(event.target.value);
     }
 
-    function searchFormSubmission(event){
-        event.preventDefault();
+    function searchFormSubmission(){
+            history
+                .push("/search", {
+                    searchedItem:search,
+                });
     }
 
     return(<div className="bodyDiv">  
@@ -50,13 +54,13 @@ function MainDiv(props){
                             </InputGroup>
                         </form>
                     </div>
-                </div>
+                </div> 
             :<div><h1 className="mainHeading">Welcome to the Home of Delicious Recipes</h1>
-                <form>
+                {/* <form> */}
                     <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
                         <img src="./images/search.svg" />
                     </button>
-                </form>
+                {/* </form> */}
             </div>
         }
         <Footer />

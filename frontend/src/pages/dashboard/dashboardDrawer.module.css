@@ -1,0 +1,80 @@
+.sideDrawer{
+    width: 250px;
+    background-color: #ffffff;
+    height: 100%;
+    padding-bottom: 1.5%;
+    margin-right:auto;
+    position:static;
+    top:0;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.title{
+    position:absolute;
+    top:0;
+    left:115px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top:20px;
+    padding-left:10px;
+    color: #484A4F;
+    display: inline;
+    text-align: center;
+}
+
+.hr{
+    left: -0.78%;
+    right: 0.78%;
+    top: 61.72%;
+    margin-bottom: 3px;
+    margin-top:35px;
+    border: 1px solid #238BF4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sideDrawerImages{
+    margin-right: 5px;
+    margin-top: -3px;
+    padding-left: 13px;
+    padding-right: 5px;
+}
+
+.sideDrawerText{
+    color: #484A4F;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+.CloseIcon{
+    position: absolute;
+    right: 1208px;
+    bottom: 530px;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+}
+.iconDiv{
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    outline: none;
+    margin-right:165px;
+    margin-top:9px;
+    align-content:right;
+}
+.iconDiv:hover{
+    background-color:red;
+}
+.images{
+    position:absolute;
+    top:0;
+    margin-top:5px;
+    left:70px;
+}
+
