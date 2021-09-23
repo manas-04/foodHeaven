@@ -3,7 +3,6 @@
     align-content: center;
     text-align: center;
     padding-left: 33%;
-    background-color: lightgrey;
 }
 
 .input{
@@ -16,28 +15,35 @@
     border-radius: 10px 10px 10px 10px;
     padding: 4px 7px 4px 7px;
     border: 0 solid ;
+    margin-left: 10px;
 }
 
 .button:hover{
-    background-color: darkgray;
+    background-color: rgb(233, 233, 233);
 }
 
 .hr{
     /* position: absolute; */
-    width: 450px;
+    width: 500px;
     height: 0px;
-
-    border: 1px solid #000000;
+    margin-top: 0px;
+    border: 1px solid #474747;
     box-sizing: border-box;
 }
 
 .card{
     display: inline-flex;
     flex-direction: row;
-    padding: 30px ;
+    padding: 25px ;
     border-radius: 20px;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+.page{
+    background-color: rgb(247, 247, 247);
+    background-image: url("https://www.transparenttextures.com/patterns/low-contrast-linen.png");
 }
 
 
