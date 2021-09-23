@@ -1,4 +1,8 @@
 import React from 'react';
+import CustomNavbar from "./navbar";
+import CloseIcon from '@material-ui/icons/Close';
+import Fab from "@material-ui/core/Fab";
+import Zoom from "@material-ui/core/Zoom";
 
 import { Nav } from 'react-bootstrap';
 import {
@@ -8,7 +12,7 @@ import {
 
 import styles from "./dashboardDrawer.module.css";
 
-function SideDrawer(){
+function SideDrawer(props){
 
     function ListItem(props){
 		return <Nav.Item>
@@ -21,14 +25,21 @@ function SideDrawer(){
 
 	return (
 		<div>
+		{
+		props.visible?
 			<div className={styles.sideDrawer}>
-				<DrawerNavigationHeader>
+				<DrawerNavigationHeader className={styles.drawer}>
 					<center>
+					<Zoom in={props.visible}>
+					<div className={styles.iconDiv}>
+					<CloseIcon className={styles.CloseIcon} onClick={props.changeVisibility}/>
+					</div>
+					</Zoom>
 						<div className={styles.title}>
 							<p style={{marginBottom:0+"px"}}>foodHeaven</p>
 							{/* <img src="./images/close_black_24dp.svg" className={styles.closeBtn} /> */}
 						</div>
-						<img src="./images/icon.svg" style={{height:100+"px"}} alt="" />
+						<img src="./images/icon.svg" className={styles.images}style={{height:50+"px"}} alt="" />
 						<hr className={styles.hr} />
 					</center>
 				</DrawerNavigationHeader>
@@ -56,7 +67,9 @@ function SideDrawer(){
 					</center>
 				</DrawerNavigation>
 			</div>
+				:null}
 		</div>
+
 	);
 }
 

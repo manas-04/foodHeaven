@@ -1,0 +1,129 @@
+.logo{
+position: absolute;
+height: 56.26447296142578px;
+width: 56.4310302734375px;
+left: 585.1624145507812px;
+top: 27.99951171875px;
+border-radius: 0px;
+margin-left: 20px;
+}
+.logoText{
+position: absolute;
+height: 25.886598587036133px;
+width: 125px;
+left: 590px;
+top: 80.11328125px;
+border-radius: nullpx;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 15px;
+line-height: 22px;
+letter-spacing: -0.04em;
+color: #000000;
+}
+.line{
+position: absolute;
+height: 1px;
+width: 1120px;
+left: 80px;
+top: 102px;
+border-radius: 0px;
+background: #00000080;
+}
+.footerText{
+height: 24px;
+left: 120px;
+top: 122px;
+border-radius: nullpx;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+line-height: 110px;
+letter-spacing: -0.015em;
+text-align: left;
+font-weight: 700;
+color: #000000;
+}
+.navbar{
+    padding-bottom: 350px;
+    margin-top:800px;
+    background-color: #18A0FB;
+    position:relative;
+}
+.form{
+position: absolute;
+height: 203px;
+width: 699px;
+left: 300px;
+top: 131px;
+border-radius: 50px;
+background:#666666;
+}
+.input{
+    position: absolute;
+    width: 500px;
+    height: 32.26px;
+    left: 96px;
+    top: 74px;
+    border-radius: 10px; 
+    border: 1px solid #00000080   
+}
+.formText{
+    position: absolute;
+    width: 913px;
+    height: 24px;
+    left: 23px;
+    top: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+.button{
+    position: absolute;
+    width: 142px;
+    height: 42px;
+    left: 275px;
+    top: 138px;
+    background: #18A0FB;
+    border-radius: 6px;
+    border: 1px solid #00000080   
+}
+.buttonText{
+    position: absolute;
+    height: 21px;
+    width: 63px;
+    left: 39.138427734375px;
+    top: 10.5498046875px;
+    border-radius: nullpx;    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+.copyright{
+position: absolute;
+height: 24px;
+width: 309px;
+left: 500px;
+top: 357px;
+border-radius: nullpx;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.015em;
+text-align: center;
+color: #000000CC;
+}
