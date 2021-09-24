@@ -5,6 +5,7 @@ import axios from 'axios';
 import SearchNavbar from './searchRecipeNavbar';
 import styles from "./search.module.css";
 import RecipeCard from './recipeCard';
+import Footer from "./footer";
 
 function SearchPage(){
 
@@ -50,6 +51,7 @@ function SearchPage(){
                     </div>
                 </div>
             </center>
+            <Footer />
         </div>
     );
 }

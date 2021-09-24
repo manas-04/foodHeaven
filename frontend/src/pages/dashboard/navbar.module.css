@@ -56,7 +56,7 @@
 .mainDiv{
     height: 137px;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top:0;
     background:wheat; 
     z-index:-1;        
