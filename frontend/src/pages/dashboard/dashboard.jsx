@@ -3,6 +3,8 @@ import CustomNavbar from './navbar';
 import Footer from "./footer";
 import SideDrawer from './sideDrawer';
 
+import styles from "./sweets.module.css";
+
 
 function Dashboard()
 {
@@ -16,6 +18,9 @@ function Dashboard()
 	return (<div> 
 	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
+		<div className={styles.sweetsCard}>
+			<h1>Lets start</h1>
+		</div>
 		<Footer />
 	</div>)
 }

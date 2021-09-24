@@ -1,7 +1,5 @@
 import React from 'react';
-import CustomNavbar from "./navbar";
 import CloseIcon from '@material-ui/icons/Close';
-import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
 
 import { Nav } from 'react-bootstrap';
@@ -29,18 +27,22 @@ function SideDrawer(props){
 		props.visible?
 			<div className={styles.sideDrawer}>
 				<DrawerNavigationHeader className={styles.drawer}>
-					<center>
-					<Zoom in={props.visible}>
-					<div className={styles.iconDiv}>
-					<CloseIcon className={styles.CloseIcon} onClick={props.changeVisibility}/>
-					</div>
-					</Zoom>
-						<div className={styles.title}>
-							<p style={{marginBottom:0+"px"}}>foodHeaven</p>
-							{/* <img src="./images/close_black_24dp.svg" className={styles.closeBtn} /> */}
-						</div>
+					<div className={styles.headingDiv}>
 						<img src="./images/icon.svg" className={styles.images}style={{height:50+"px"}} alt="" />
-						<hr className={styles.hr} />
+						<p style={{marginBottom:0+"px"}} className={styles.title} >foodHeaven</p>
+						<div style={{marginLeft:15+"px",marginTop:19+"px"}}>
+							<Zoom in={props.visible}>
+								<div className={styles.close}>
+									<CloseIcon onClick={props.changeVisibility}/>
+								</div>
+							</Zoom>
+						</div>
+					</div>
+					<center>
+						<hr 
+							className={styles.hr} 
+							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:1+"px",marginTop:17+"px"}}	
+						/>
 					</center>
 				</DrawerNavigationHeader>
 				<DrawerNavigation>
@@ -52,7 +54,7 @@ function SideDrawer(props){
 					<center>
 						<hr 
 							className={styles.hr} 
-							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:8+"px"}}
+							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:8+"px",marginTop:17+"px"}}
 						/>
 					</center>
 					<ListItem redirectLink="/" imageUrl="./images/profile.svg" Item="Manage Profile" />
@@ -62,7 +64,7 @@ function SideDrawer(props){
 					<center>
 						<hr 
 							className={styles.hr} 
-							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:8+"px"}}
+							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:8+"px",marginTop:17+"px"}}
 						/>
 					</center>
 				</DrawerNavigation>

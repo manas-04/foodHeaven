@@ -16,7 +16,7 @@ function NavBar(props){
 
     return (<nav className="navbar-expand-lg navbar-light localNavBar">
     <div className="navbar-brand mb-0 h1">
-        <img src="./images/icon.svg" width="33" height="33" className="d-inline-block align-top" style={{marginRight:12 + "px"}}  alt=""/>
+        <img src="./images/icon.svg" width="33" height="33" style={{marginRight:10 + "px"}}  alt=""/>
         foodHeaven
     </div>
     <div className="itemDiv">
