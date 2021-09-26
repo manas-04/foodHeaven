@@ -26,7 +26,7 @@ function CustomNavbar(props){
         <div>
           <Navbar sticky="top" expand="lg" >
             <Container className={styles.navText}>
-                <Nav className="me-auto justify-content-between w-100 " >
+                <Nav className="me-auto justify-content-between w-100 ">
                   <NavDropdown title="Categories" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>

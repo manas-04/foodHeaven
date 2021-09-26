@@ -1,3 +1,36 @@
 .sweetsCard{
-    margin-top: 137px
+    margin-top: 137px;
+    background-color: lightgray;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sweetTitle{
+    font-size: 22px;
+    padding-top: 40px;
+}
+
+.sweetTitle:hover{
+    text-decoration: underline;
+}
+
+.sweetImage{
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #a0a0a0;
+}
+ 
+.readMore:hover{
+    cursor: pointer;
+}
+
+.sweetImage:hover{
+    box-shadow: 10px 20px 36px #888888;
+    transform: scale(1.03);
+    transition: all .3s ease-out;
 }

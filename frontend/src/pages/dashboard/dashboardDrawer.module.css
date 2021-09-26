@@ -4,8 +4,9 @@
     height: 100%;
     padding-bottom: 1.5%;
     margin-right:auto;
-    position:static;
+    position:absolute;
     top:0;
+    z-index: 5;
     border-left: 2px solid black;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
