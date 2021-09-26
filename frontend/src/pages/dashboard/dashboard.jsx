@@ -1,10 +1,12 @@
-import React,{useState} from 'react';
+import React ,{useState} from 'react';
+
+
 import CustomNavbar from './navbar';
 import Footer from "./footer";
 import SideDrawer from './sideDrawer';
+import SweetSection from './sweetsSection';
 
-import styles from "./sweets.module.css";
-
+import {Button} from "react-bootstrap";
 
 function Dashboard()
 {
@@ -16,11 +18,9 @@ function Dashboard()
 	}
 
 	return (<div> 
-	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
-		<div className={styles.sweetsCard}>
-			<h1>Lets start</h1>
-		</div>
+	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
+		<SweetSection />
 		<Footer />
 	</div>)
 }
