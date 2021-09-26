@@ -13,7 +13,7 @@ import styles from "./dashboardDrawer.module.css";
 function SideDrawer(props){
 
     function ListItem(props){
-		return <Nav.Item>
+		return <Nav.Item style={{position:"relative",zIndex:"2"}}>
 		<Nav.Link href={props.redirectLink} className={styles.sideDrawerText}>
 			<img src={props.imageUrl} className={styles.sideDrawerImages} alt="" />
 			{props.Item}

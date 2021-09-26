@@ -2,8 +2,7 @@ import React,{useState} from 'react';
 import CustomNavbar from './navbar';
 import Footer from "./footer";
 import SideDrawer from './sideDrawer';
-
-import styles from "./sweets.module.css";
+import Banner from "./banner";
 
 
 function Dashboard()
@@ -15,12 +14,26 @@ function Dashboard()
 		setVisible(!isVisible);
 	}
 
+	const [activeStep, setActiveStep] = React.useState(0);
+
+	const handleNext = () => {
+		setActiveStep((prevActiveStep) => prevActiveStep + 1);
+	  };
+	
+	  const handleBack = () => {
+		setActiveStep((prevActiveStep) => prevActiveStep - 1);
+	  };
+	
+	  const handleStepChange = (step) => {
+		setActiveStep(step);
+	  };
+
 	return (<div> 
-	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
-		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
-		<div className={styles.sweetsCard}>
-			<h1>Lets start</h1>
+		<CustomNavbar visible={isVisible} changeVisibility={changeVisibility} />
+		<div>
+		<SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		</div>
+		<Banner handleNext={handleNext} handleBack={handleBack} handleStepChange={handleStepChange} activeStep={activeStep}/>
 		<Footer />
 	</div>)
 }
