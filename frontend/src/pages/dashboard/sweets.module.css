@@ -1,18 +1,17 @@
 .sweetsCard{
-    margin-top: 137px;
-    background-color: lightgray;
+    background-color: white;
 }
 
 .section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .sweetTitle{
-    font-size: 22px;
+    font-size: 26px;
     padding-top: 40px;
 }
 
@@ -29,8 +28,8 @@
     cursor: pointer;
 }
 
-.sweetImage:hover{
+/* .sweetImage:hover{
     box-shadow: 10px 20px 36px #888888;
     transform: scale(1.03);
     transition: all .3s ease-out;
-}
+} */

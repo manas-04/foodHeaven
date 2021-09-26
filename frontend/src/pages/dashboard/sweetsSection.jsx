@@ -16,7 +16,7 @@ function SweetSection(){
                 <p className={styles.sweetTitle}>
                     {sweetsTitle[randomNumber]}
                 </p>
-                <p style={{paddingBottom:20+"px"}}>
+                <p style={{paddingBottom:20,fontSize:19,fontWeight:300}}>
                     {sweetsData[randomData].description}
                 </p>
                 <Button 

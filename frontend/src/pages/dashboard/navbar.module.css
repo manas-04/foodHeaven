@@ -58,8 +58,9 @@
     width: 100%;
     position: absolute;
     top:0;
-    background:wheat; 
+    background:rgb(231, 231, 231); 
     z-index:-1;        
+    background-image: linear-gradient(rgb(230, 230, 230),white);
 }
 .search{
     position: absolute;

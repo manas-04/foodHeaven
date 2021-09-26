@@ -27,27 +27,23 @@ function CustomNavbar(props){
           <Navbar sticky="top" expand="lg" >
             <Container className={styles.navText}>
                 <Nav className="me-auto justify-content-between w-100 ">
-                  <NavDropdown title="Categories" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#link"  className={styles.text}>Favouried
-                <img className={styles.arrow} src="./images/arrow_forward.svg"/>
+                <Nav.Link href="#categories"  className={styles.text}>Categories
+                  <img className={styles.arrow} src="./images/arrow_forward.svg"/>
+                </Nav.Link>  
+                <Nav.Link href="#link"  className={styles.text}>Favouried
+                  <img className={styles.arrow} src="./images/arrow_forward.svg"/>
                 </Nav.Link>
-                  <Nav.Link href="#home">About Us
+                <Nav.Link href="#link">About Us
                   <img className={styles.arrow}  src="./images/arrow_forward.svg"/>
-                  </Nav.Link>
-                  <Nav.Link href="#link">Features
-                <img className={styles.arrow} src="./images/arrow_forward.svg"/>
-              </Nav.Link>
-            </Nav>
-          </Container>
-      </Navbar>
-    </div>
-	</div>
+                </Nav.Link>
+                <Nav.Link href="#link">Features
+                  <img className={styles.arrow} src="./images/arrow_forward.svg"/>
+                </Nav.Link>
+              </Nav>
+            </Container>
+          </Navbar>
+        </div>
+	    </div>
 }
 
 
