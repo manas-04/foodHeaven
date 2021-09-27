@@ -1,53 +1,110 @@
 import React from 'react';
-import { Nav,Navbar,Container,NavDropdown } from 'react-bootstrap';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
 import styles from "./navbar.module.css";
 
-function CustomNavbar(props){
-  
-	return <div className={styles.mainDiv}>
+function CustomNavbar(props) {
+
+  return <div className={styles.mainDiv}>
     <div>
-        <Navbar expand="lg" sticky="top" className={styles.navbar}>
-          <Container>
-            <Navbar.Brand onClick={props.changeVisibility}>
-              <img className={styles.menu}src="./images/menu.svg"/>
-              <p className={styles.menuText}>MENU</p>
-            </Navbar.Brand>
-            <Nav>
-              <Nav.Link href="#home"><img className={styles.logo} src="./images/icon.svg"/>
+      <Navbar expand="lg" sticky="top" style={{ width: "85%" }}>
+        <Container style={{ marginLeft: "4%" }}>
+          <Navbar.Brand onClick={props.changeVisibility}>
+            <img className={styles.menu} src="./images/menu.svg" />
+            <p className={styles.menuText}>MENU</p>
+          </Navbar.Brand>
+          <Nav>
+            <Nav.Link href="#home"><img className={styles.logo} src="./images/icon.svg" />
               <p className={styles.logoText}>foodHeaven</p>
-              </Nav.Link>
-            </Nav>
-          </Container>
-        </Navbar>
-          <img className={styles.search} src="./images/search.svg"/>
-          <img className={styles.profile} src="./images/profile.svg"/>
-        </div>
-          <hr className={styles.line}></hr>
-        <div>
-          <Navbar sticky="top" expand="lg" >
-            <Container className={styles.navText}>
-                <Nav className="me-auto justify-content-between w-100 " >
-                  <NavDropdown title="Categories" id="basic-nav-dropdown" style={{position:"relative",zIndex:"2"}}>
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#link"  className={styles.text}>Favouried
-                <img className={styles.arrow} src="./images/arrow_forward.svg"/>
-                </Nav.Link>
-                  <Nav.Link href="#home">About Us
-                  <img className={styles.arrow}  src="./images/arrow_forward.svg"/>
-                  </Nav.Link>
-                  <Nav.Link href="#link">Features
-                <img className={styles.arrow} src="./images/arrow_forward.svg"/>
-              </Nav.Link>
-            </Nav>
-          </Container>
+            </Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <div>
+        <Button onClick={props.handleClickOpen}
+          sx={{
+            position: "absolute",
+            top: "3.5%",
+            left: "88%",
+          }}>
+          <img src="./images/search.svg" alt="Search" />
+        </Button>
+        <Dialog open={props.open} onClose={props.handleClose}
+          sx={{
+            ".MuiPaper-root": {
+              maxWidth: 700,
+              width: 700,
+              height: 150,
+              alignItems: "center",
+              borderRadius: 10,
+              display: "inline-block",
+            }
+          }}
+        >
+          <DialogTitle
+            style={{ display: "flex",
+            alignSelf: "flex-start",
+            marginLeft: "250px",
+            fontWeight:"bold",
+            fontFamily:"ubuntu" ,
+            fontSize:24,
+            color:"wheat"
+            }}
+          >Type To Search</DialogTitle>
+          <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "30px", position: "relative"}}>
+            <TextField
+              autoFocus
+              margin="dense"
+              id="name"
+              type="email"
+              fullWidth
+              variant="standard"
+              placeholder="Search Recipes"
+              value={props.searchedItem}
+              onChange={props.inputHandler}
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button style={{ position: "absolute", bottom: "35%" }} onClick={props.handleClose} name="Search">
+              <img src="./images/search.svg" alt="Search" />
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+      <img className={styles.profile} src="./images/profile.svg" alt="Profile" />
+    </div>
+    <hr className={styles.line}></hr>
+    <div>
+      <Navbar sticky="top" expand="lg" >
+        <Container className={styles.navText}>
+          <Nav className="me-auto justify-content-between w-100 " >
+            <NavDropdown title="Categories" id="basic-nav-dropdown" style={{ position: "relative", zIndex: "2" }}>
+              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#link" className={styles.text}>Favouried
+              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+            </Nav.Link>
+            <Nav.Link href="#home">About Us
+              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+            </Nav.Link>
+            <Nav.Link href="#link">Features
+              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+            </Nav.Link>
+          </Nav>
+        </Container>
       </Navbar>
     </div>
-	</div>
+  </div>
 }
 
 
