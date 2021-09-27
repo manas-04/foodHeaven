@@ -13,7 +13,7 @@ import styles from "./dashboardDrawer.module.css";
 function SideDrawer(props){
 
     function ListItem(props){
-		return <Nav.Item>
+		return <Nav.Item onClick={props.onClick}>
 		<Nav.Link href={props.redirectLink} className={styles.sideDrawerText}>
 			<img src={props.imageUrl} className={styles.sideDrawerImages} alt="" />
 			{props.Item}
@@ -46,21 +46,21 @@ function SideDrawer(props){
 					</center>
 				</DrawerNavigationHeader>
 				<DrawerNavigation>
-					<ListItem redirectLink="/" imageUrl="./images/cottage_black_24dp.svg" Item="Home" />
-					<ListItem redirectLink="/" imageUrl="./images/explore_black_24dp.svg" Item="Explore" />
-					<ListItem redirectLink="/" imageUrl="./images/categories.svg" Item="Categories" />
-					<ListItem redirectLink="/" imageUrl="./images/history.svg" Item="History" />
-					<ListItem redirectLink="/" imageUrl="./images/diary-1118.svg" Item="View Saved Recipies" />
+					<ListItem redirectLink="/" imageUrl="./images/cottage_black_24dp.svg" Item="Home" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/explore_black_24dp.svg" Item="Explore" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="#categories" imageUrl="./images/categories.svg" Item="Categories" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/history.svg" Item="History" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/diary-1118.svg" Item="View Saved Recipies" onClick={props.changeVisibility}/>
 					<center>
 						<hr 
 							className={styles.hr} 
 							style={{marginLeft:15+"px",marginRight:15+"px",marginBottom:8+"px",marginTop:17+"px"}}
 						/>
 					</center>
-					<ListItem redirectLink="/" imageUrl="./images/profile.svg" Item="Manage Profile" />
-					<ListItem redirectLink="/" imageUrl="./images/feedback.svg" Item="Give Feedback" />
-					<ListItem redirectLink="/" imageUrl="./images/question-answer-5528.svg" Item="About Us" />
-					<ListItem redirectLink="/" imageUrl="./images/logout.svg" Item="Sign Out" />
+					<ListItem redirectLink="/" imageUrl="./images/profile.svg" Item="Manage Profile" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/feedback.svg" Item="Give Feedback" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/question-answer-5528.svg" Item="About Us" onClick={props.changeVisibility}/>
+					<ListItem redirectLink="/" imageUrl="./images/logout.svg" Item="Sign Out" onClick={props.changeVisibility}/>
 					<center>
 						<hr 
 							className={styles.hr} 

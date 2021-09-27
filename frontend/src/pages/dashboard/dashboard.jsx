@@ -6,10 +6,11 @@ import SideDrawer from './sideDrawer';
 import SweetSection from './sweetsSection';
 import Banner from "./banner";
 import CategoriesSection from "./categoriesSection";
+import ArticleSection from './articles';
 
 
-function Dashboard()
-{
+function Dashboard(){
+
 	const[isVisible,setVisible]=useState(false);
 
 	function changeVisibility()
@@ -35,6 +36,7 @@ function Dashboard()
 		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
 	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<Banner handleNext={handleNext} handleBack={handleBack} handleStepChange={handleStepChange} activeStep={activeStep}/>
+		<ArticleSection />
 		<SweetSection />
 		<CategoriesSection />
 		<Footer />

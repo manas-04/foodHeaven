@@ -1,0 +1,32 @@
+.card{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8px 15px 8px 15px;
+}
+
+.article{
+    margin: 20px;
+    padding: 10px ;
+    box-shadow: 1px 1px 10px 1px rgb(230, 230, 230);
+    border-radius: 10px;
+}
+
+.title{
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width:70%;
+}
+
+.hr{
+    border: 1px solid black;
+    width: 70%;
+}
+
+.link{
+    color: black;
+}

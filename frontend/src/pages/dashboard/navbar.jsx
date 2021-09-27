@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav,Navbar,Container,NavDropdown } from 'react-bootstrap';
+import { Nav,Navbar,Container} from 'react-bootstrap';
 import styles from "./navbar.module.css";
 
 function CustomNavbar(props){
@@ -33,7 +33,7 @@ function CustomNavbar(props){
                 <Nav.Link href="#link"  className={styles.text}>Favouried
                   <img className={styles.arrow} src="./images/arrow_forward.svg"/>
                 </Nav.Link>
-                <Nav.Link href="#link">About Us
+                <Nav.Link href="#article">Food Articles
                   <img className={styles.arrow}  src="./images/arrow_forward.svg"/>
                 </Nav.Link>
                 <Nav.Link href="#link">Features

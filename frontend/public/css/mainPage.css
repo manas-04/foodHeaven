@@ -1,6 +1,7 @@
 :root {
     --main-bg-color: orange;
     --secondary-bg-color: lightgrey;
+    --font-family:"Ubuntu";
 }
 
 body{

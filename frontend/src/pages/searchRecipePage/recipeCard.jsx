@@ -20,7 +20,7 @@ function RecipeCard(props){
         setServings(res.data.servings);
         setHealthScore(res.data.spoonacularScore);
         setDuration(res.data.readyInMinutes);
-        setSourceUrl(res.data.sourceUrl);
+        setSourceUrl(res.data.spoonacularSourceUrl);
     };
 
     return <a href={sourceUrl} style={{color:"black"}}>
