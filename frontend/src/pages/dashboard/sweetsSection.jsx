@@ -6,7 +6,7 @@ import { sweetsData } from './sweetsTitle.jsx';
 import {Button} from "react-bootstrap";
 
 const randomNumber = Math.floor(Math.random() * 29);
-const randomData = Math.floor(Math.random() * 11);
+const randomData = Math.floor(Math.random() * 22);
 
 function SweetSection(){
     return <div className={styles.sweetsCard}>
@@ -16,7 +16,7 @@ function SweetSection(){
                 <p className={styles.sweetTitle}>
                     {sweetsTitle[randomNumber]}
                 </p>
-                <p style={{paddingBottom:20+"px"}}>
+                <p style={{paddingBottom:20,fontSize:19,fontWeight:300}}>
                     {sweetsData[randomData].description}
                 </p>
                 <Button 
