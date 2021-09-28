@@ -15,7 +15,7 @@ function Banner(props) {
   const maxSteps = images.length;
 
   return (
-      <section style={{marginRight:"60px",marginLeft:"60px",height:"100%",opacity:"0.9",marginTop:137}}>
+      <section style={{marginRight:"60px",marginLeft:"60px",height:"100%",opacity:"0.9",marginTop:151}}>
     <Box sx={{flexGrow: 1 }}>
         <Typography 
         sx={{
@@ -62,15 +62,15 @@ function Banner(props) {
       </AutoPlaySwipeableViews>
 
       <Button style={{
-      position: "absolute",
-      left: "45%",
-      right: "5%",
-      top: "113%",
-      bottom: "0%",
-      background: "#18A0FB",
-      borderRadius: "6px",
-      height: "50px",
-      width: "150px"
+        position: "absolute",
+        left: "45%",
+        right: "5%",
+        top: "113%",
+        bottom: "0%",
+        background: "#18A0FB",
+        borderRadius: "6px",
+        height: "50px",
+        width: "150px"
       }}> 
       <p style={{textAlign:"center",color:'#ffffff',marginTop:"15px"}}>Read More</p> 
         </Button>

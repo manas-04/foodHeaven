@@ -1,4 +1,5 @@
 import React ,{useState} from 'react';
+import { useHistory } from "react-router-dom";
 
 import CustomNavbar from './navbar';
 import Footer from "./footer";
@@ -9,9 +10,11 @@ import CategoriesSection from "./categoriesSection";
 import ArticleSection from './articles';
 
 
-function Dashboard(){
+function Dashboard(props){
 
-	const[isVisible,setVisible]=useState(false);
+	const[isVisible,setVisible]=useState(false);	
+	const [open, setOpen] = React.useState(false);
+	let history = useHistory();
 
 	function changeVisibility()
 	{
@@ -32,8 +35,28 @@ function Dashboard(){
 		setActiveStep(step);
 	  };
 
+	  const handleClickOpen = () => {
+		  setOpen(!open);
+	  };
+  
+	  const [searchedItem, setsearchedItem] = useState(props.itemSearched);
+  
+	  function inputHandler(event) {
+		  setsearchedItem(event.target.value);
+	  }
+  
+	  function handleClose(){
+		  history
+			  .push("/search", {
+				  searchedItem: searchedItem,
+			  });
+		  window.location.reload();
+	  };
+
 	return (<div> 
-		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
+		<CustomNavbar visible={isVisible} changeVisibility={changeVisibility} open={open} handleClickOpen={handleClickOpen}
+			handleClose={handleClose} searchedItem={searchedItem} inputHandler={inputHandler}
+		/>
 	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<Banner handleNext={handleNext} handleBack={handleBack} handleStepChange={handleStepChange} activeStep={activeStep}/>
 		<SweetSection />
