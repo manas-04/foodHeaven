@@ -10,8 +10,8 @@ function SearchNavbar(props){
     const history = useHistory();
 
     function inputHandler(event){
-        setsearchedItem(event.target.value);
-    }
+       setsearchedItem(event.target.value);
+    } 
 
     function searchFormSubmission(){
         history

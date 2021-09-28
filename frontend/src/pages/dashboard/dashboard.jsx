@@ -62,6 +62,7 @@ function Dashboard(props){
 		<SweetSection />
 		<ArticleSection />
 		<CategoriesSection />
+
 		<Footer />
 	</div>)
 }
