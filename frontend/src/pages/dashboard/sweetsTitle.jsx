@@ -87,6 +87,61 @@ export const sweetsData = [
         imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-950516_11-cc69f96.jpg?quality=90&webp=true&resize=400,272",
         description:"Squidgy and super moreish, these gorgeous foolproof fruity chocolate bakes will be snapped up in seconds.",
         sourceLink:"https://www.bbcgoodfood.com/recipes/best-ever-chocolate-raspberry-brownies",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-22204_10-836d350.jpg?quality=90&webp=true&resize=400,300",
+        description:"A simple but very impressive pud, light enough to have a slice to finish a big meal",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/luscious-lemon-baked-cheesecake"
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Sticky-Toffee-Pudding-ef07c63.jpg?quality=90&webp=true&resize=400,272",
+        description:"Leave our slow cooker sticky pudding to cook all day so it’s ready to serve in the evening with ice cream. Rich and indulgent, it's the ultimate comforting dessert",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/slow-cooker-sticky-toffee-pudding",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1158520_11-6cba88d.jpg?quality=90&webp=true&resize=400,300",
+        description:"Indulge guests at your next party with this impressive dessert. A touch of salt really sets off the caramel and dark chocolate",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/salted-caramel-chocolate-torte",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/salted-caramel-brownies-e067f0c.jpg?quality=90&webp=true&resize=400.300",
+        description:"Take indulgent, fudgy chocolate brownies to the next level with a layer of salted caramel running through the centre of each bite.",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/salted-caramel-brownies"
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bread-and-butter-pudding-847d448.jpg?quality=90&webp=true&resize=400,272",
+        description:"Transform a stale loaf into a comforting bread and butter pudding. This traditional British dessert is layered with a rich vanilla custard, dried fruit and lemon zest",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/bread-butter-pudding",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1074483_11-95c0bae.jpg?quality=90&webp=true&resize=400,272",
+        description:"This intense chocolate orange sponge bake with thick sauce is about as indulgent as a good pudding gets",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/self-saucing-jaffa-pudding"
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/banoffee-pie-6970410.jpg?quality=90&webp=true&resize=400,272",
+        description:"Treat loved ones to a banoffee pie for dessert featuring a classic biscuit base, oozy caramel, bananas, cream and chocolate. Who could resist?",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/easy-banoffee-pie"
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2019/05/Apple-pie-eccbfb3.jpg?quality=90&webp=true&resize=400,272",
+        description:"Try our classic Bramley apple pie with homemade shortcrust pastry. Simplicity is key to this traditional dish which makes for a comforting family pudding.",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/ultimate-apple-pie",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-45905_12-243db72.jpg?quality=90&webp=true&resize=400,300",
+        description:"A stunning no-cook pudding bursting with summer flavours - great for relaxed entertaining",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/white-chocolate-berry-cheesecake"
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/squidgy-chocolate-pear-pudding-37c536a.jpg?quality=90&webp=true&resize=400,272",
+        description:"This hot, gooey chocolate pud, with dark chocolate and canned pears, can be made ahead and frozen – a perfect no-fuss dinner party dessert",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/squidgy-chocolate-pear-pudding",
+    },
+    {
+        imageUrl:"https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-890467_11-649aab9.jpg?quality=90&webp=true&resize=400,272",
+        description:"A rich and creamy baked cheesecake that makes a great dinner party dessert",
+        sourceLink:"https://www.bbcgoodfood.com/recipes/baked-raspberry-lemon-cheesecake"
     }
 ];
 

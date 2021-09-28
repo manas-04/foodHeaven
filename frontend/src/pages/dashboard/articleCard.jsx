@@ -5,11 +5,14 @@ import styles from "./articleCard.module.css";
 function ArticleCard(props){
     return <div className={styles.card}>
         <center>
-            <a href="" className={styles.link}>
+            <a className={styles.link} href={props.url}>
                 <div className={styles.article}>
-                    <img src={props.image} alt="" height="250" width="360" style={{objectFit:"contain"}}/>
+                    <img src={props.imageUrl} alt="" height={300} width={100+"%"} style={{objectFit:"cover"}}/>
                     <p className={styles.title}>
                         {props.title}
+                    </p>
+                    <p>
+                        {props.description}
                     </p>
                 </div>
             </a>

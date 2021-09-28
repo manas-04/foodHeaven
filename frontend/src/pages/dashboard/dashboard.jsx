@@ -36,8 +36,8 @@ function Dashboard(){
 		<CustomNavbar  visible={isVisible} changeVisibility={changeVisibility} />
 	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<Banner handleNext={handleNext} handleBack={handleBack} handleStepChange={handleStepChange} activeStep={activeStep}/>
-		<ArticleSection />
 		<SweetSection />
+		<ArticleSection />
 		<CategoriesSection />
 		<Footer />
 	</div>)

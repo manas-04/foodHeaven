@@ -3,35 +3,41 @@ import axios from 'axios';
 
 import ArticleCard from "./articleCard";
 import styles from "./articleCard.module.css";
+import recipes from "./articleData";
+
+const random = Math.floor(Math.random() * 20);
 
 function ArticleSection(){
 
-    const [recipes,setRecipes] = useState([]);
+    const [Data,setData] = useState([]); 
 
     useEffect(() => {
         getData();
     }, []);
 
-    const getData = async () => {
-        const res = await axios.get("https://api.spoonacular.com/recipes/random?number=4&apiKey=a388cd6ac0a84ac29036f7fa562973ac");
-        setRecipes(res.data.recipes);
+    const getData = () => {
+       setData(recipes.slice(random, random+4));
     };
 
-    return<div style={{paddingTop:20}} id="article">
+    return<section style={{paddingTop:20,backgroundColor:"rgb(233, 233, 233)"}} id="article">
     <center>
         <h5 style={{fontSize:34,fontWeight:300}}>Articles</h5>
         <hr className={styles.hr}/>
-        <div style={{width:80+"%"}}>
-            {recipes.map((recipe)=>{
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div style={{width:100+"%"}}>
+            {Data.map((recipe)=>{
                 return <ArticleCard 
-                    key={recipe.id}
                     title={recipe.title}
-                    image={recipe.image}
+                    description={recipe.description}
+                    imageUrl={recipe.imageUrl}
+                    url={recipe.websiteUrl}
                 />
             })}
         </div>
     </center>
-</div>
+</section>
 }
 
 export default ArticleSection;
