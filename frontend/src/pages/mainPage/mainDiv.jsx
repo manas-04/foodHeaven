@@ -6,6 +6,8 @@ import Footer from "./footer";
 
 function MainDiv(props){
 
+    // const randomImage = Images[Math.floor(Math.random() * 3)];
+
     const [search,setSearch] = useState("");
     const history = useHistory();
 
@@ -63,6 +65,7 @@ function MainDiv(props){
                 {/* </form> */}
             </div>
         }
+        {/* {console.log(randomImage)} */}
         <Footer />
     </div>);
 }

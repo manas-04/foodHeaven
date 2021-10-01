@@ -49,19 +49,17 @@ function CustomNavbar(props) {
           <DialogTitle
             style={{ display: "flex",
             alignSelf: "flex-start",
-            marginLeft: "250px",
+            marginLeft: "230px",
             fontWeight:"bold",
             fontFamily:"ubuntu" ,
             fontSize:24,
             color:"wheat"
             }}
           >Type To Search</DialogTitle>
-          <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "30px", position: "relative"}}>
+          <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "10px", position: "relative"}}>
             <TextField
               autoFocus
               margin="dense"
-              id="name"
-              type="email"
               fullWidth
               variant="standard"
               placeholder="Search Recipes"
@@ -89,7 +87,7 @@ function CustomNavbar(props) {
             <Nav.Link href="#link" className={styles.text}>Favouried
               <img className={styles.arrow} src="./images/arrow_forward.svg" />
             </Nav.Link>
-            <Nav.Link href="#home">About Us
+            <Nav.Link href="#article">Articles
               <img className={styles.arrow} src="./images/arrow_forward.svg" />
             </Nav.Link>
             <Nav.Link href="#link">Features

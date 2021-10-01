@@ -1,9 +1,9 @@
 import React from 'react';
+import {Button} from "react-bootstrap";
 
 import styles from "./sweets.module.css";
 import sweetsTitle from "./sweetsTitle.jsx";
 import { sweetsData } from './sweetsTitle.jsx';
-import {Button} from "react-bootstrap";
 
 const randomNumber = Math.floor(Math.random() * 29);
 const randomData = Math.floor(Math.random() * 22);
