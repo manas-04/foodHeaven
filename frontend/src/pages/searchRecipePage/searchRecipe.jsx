@@ -2,6 +2,7 @@ import {React , useState, useEffect} from 'react';
 import { useLocation } from 'react-router';
 import axios from 'axios';
 import { useHistory } from 'react-router';
+import {BeatLoader} from "react-spinners";
 
 import SearchNavbar from './searchRecipeNavbar';
 import styles from "./search.module.css";
@@ -23,16 +24,16 @@ function SearchPage(){
 
     useEffect(() => {
         getData();
-    }, []);
+    });
 
     const getData = async () => {
-        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey + "&number=3")
+        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&number=3")
         .then((res)=>{
             setSearchedItems(res.data.results);
             setTotalRecipe(res.data.totalResults);
             setTimeout(() => {
                 setLoading(false);
-            }, 500);
+            }, 1000);
         }).catch((error) => {
             console.log(error);
             setTimeout(() => {
@@ -44,14 +45,15 @@ function SearchPage(){
 
     return (
         <div>
-        {isLoading
-            ?<div className={styles.mainDiv}>
+        {isLoading?
+            <div className={styles.mainDiv}>
                 <center>
                     <div className={styles.container}>
                         <img alt=" " src="../images/dataProcessing.svg" className={styles.image}/>
                         <p style={{fontSize:34}}>
-                            Processing your request .... 
+                            Processing your request ...
                         </p>
+                        <BeatLoader loading />
                     </div>
                 </center>
             </div>

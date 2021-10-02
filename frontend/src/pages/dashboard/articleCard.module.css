@@ -37,6 +37,8 @@
 .hr{
     border: 1px solid black;
     width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .link{

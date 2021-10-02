@@ -1,5 +1,7 @@
 import React ,{useState} from 'react';
 import { useHistory } from "react-router-dom";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import CustomNavbar from './navbar';
 import Footer from "./footer";
@@ -8,6 +10,7 @@ import SweetSection from './sweetsSection';
 import Banner from "./banner";
 import CategoriesSection from "./categoriesSection";
 import ArticleSection from './articles';
+import Slider from './slider';
 
 
 function Dashboard(props){
@@ -60,6 +63,7 @@ function Dashboard(props){
 	    <SideDrawer visible={isVisible} changeVisibility={changeVisibility}/>
 		<Banner handleNext={handleNext} handleBack={handleBack} handleStepChange={handleStepChange} activeStep={activeStep}/>
 		<SweetSection />
+		<Slider />
 		<ArticleSection />
 		<CategoriesSection />
 		<Footer />

@@ -32,7 +32,7 @@ function NavBar(props){
             Sign-Up
         </button>
         <button className="btn iconBtn " onClick={props.changeVisibility}>
-            <img src="./images/search.svg" />
+            <img src="./images/search.svg" alt=""/>
         </button>
     </div>
     </nav>);
