@@ -1,6 +1,5 @@
 import React from "react"; 
 import { useHistory } from "react-router-dom";
-import axios from "axios";
 
 function Footer(){
 
@@ -13,13 +12,6 @@ function Footer(){
         }else if(name==="register"){
             history.push("/register");
         }  
-    }
-
-    async function chalahiletehai(event){
-        await axios.post(`/user/login`,{
-                mess:"Button Daba Diya",
-            }
-        );
     }
 
     return (<footer className="localFooter">
@@ -43,9 +35,6 @@ function Footer(){
                 </button>
                 <button className="btn localBtn" name="register" onClick={clickHandler}>
                     Sign-Up
-                </button>
-                <button className="btn localBtn" name="register" onClick={chalahiletehai}>
-                    Button
                 </button>
             </div>
             

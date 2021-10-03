@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Form , Row , Col , Button} from "react-bootstrap";
+import axios from "axios";
+import { useHistory } from "react-router";
 
 import styles from "./registerPage.module.css";
 
 function SignUpForm(){
 
+    const history = useHistory();
+    const [response,setResponse] = useState();
     const [userDetails,setUserDetails] = useState({
         firstName:"",
         lastName:"",
@@ -14,7 +18,6 @@ function SignUpForm(){
 
     function InputHandler(event){
         const {name,value} = event.target;
-        console.log(name,value);
 
         setUserDetails((prev)=>{
             return {
@@ -24,9 +27,23 @@ function SignUpForm(){
         });
     }
 
-    function formSubmission(event){
+    async function formSubmission(event){
         event.preventDefault();
-        console.log(userDetails);
+
+        await axios.post(`/user/signUp`,{
+            user:userDetails
+        }).then((res)=>{
+            setResponse(res.data.msg);
+            console.log(res.status);
+            if(res.status == 200){
+                history.push("/dashboard");
+            }else{
+                history.push("/error");
+            }
+
+        }).catch((error) => {
+            console.log(error);     
+        });
     }
     
     return <center className={styles.formCard} >
