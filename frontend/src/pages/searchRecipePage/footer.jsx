@@ -12,7 +12,7 @@ function Footer() {
 						<Nav.Link href="#home" className={styles.footerText}>COMMUNITY</Nav.Link>
 						<Nav.Link href="#home" className={styles.footerText}>CATEGORIES</Nav.Link>
 						<Nav.Link href="#home">
-							<img className={styles.logo} src="./images/icon.svg" />
+							<img className={styles.logo} src="./images/icon.svg" alt="" />
 							<p className={styles.logoText}>foodHeaven</p>
 						</Nav.Link>
 						<Nav.Link href="#features" className={styles.footerText}>ABOUT US</Nav.Link>

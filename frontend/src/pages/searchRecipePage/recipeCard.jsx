@@ -13,7 +13,7 @@ function RecipeCard(props){
 
     useEffect(() => {
         getData();
-    }, []);
+    });
 
     const getData = async () => {
         const res = await axios.get("https://api.spoonacular.com/recipes/" + props.id + "/information?apiKey=4f798ddd3ec9486caa20502738eb32c4");

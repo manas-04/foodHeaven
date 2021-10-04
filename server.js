@@ -1,17 +1,30 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const searchRouter = require("./routers/searchRouter");
+require("dotenv").config();
+
+const db = require("./utils/db");
+const authrouter = require("./routers/authrouter");
 
 const app = express();
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(searchRouter);
 app.use(express.json());
+app.use(authrouter);
 
-app.get("/",function(req,res){
-})
-
-app.listen(4000, function() {
-    console.log("Server started on port 4000");
+app.get('/', (req,res) => {
+    res.send(`<h1>API Running on the port 4000</h1>`);
 });
+
+db.then(connection => {
+    if(connection){
+        console.log("Server connected.");
+        app.listen(4000,function(){
+            console.log("Server listening at port 4000.");
+        });
+    }
+}).catch(err => {
+    console.log(err);
+});
+
+

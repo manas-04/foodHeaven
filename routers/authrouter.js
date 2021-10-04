@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 var bodyParser = require('body-parser');
 
-const searchController = require("../controllers/searchController");
-
+const authController = require("../controllers/authcontroller");
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 
-router.get("/search/:itemToBeSearched",urlencodedParser, searchController.getRecipeArray);
+router.post(`/user/signUp`,urlencodedParser, authController.signUp);
+router.post(`/user/login`,urlencodedParser, authController.logIn);
 
 module.exports = router;

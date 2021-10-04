@@ -2,12 +2,11 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 function Footer(){
-    
+
     let history = useHistory();
 
     function clickHandler(event){
         const name = event.target.name;
-        // console.log(event);
         if(name==="login"){
             history.push("/login");
         }else if(name==="register"){

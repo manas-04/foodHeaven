@@ -40,7 +40,7 @@ function SearchNavbar(props){
                 className={styles.button}
                 onClick={searchFormSubmission}
             >
-                <img src="images/search.svg" width="30" height="30"/>
+                <img src="images/search.svg" width="30" height="30" alt="" />
             </Button>
         {/* {console.log(props.itemSearched)} */}
     </Navbar>

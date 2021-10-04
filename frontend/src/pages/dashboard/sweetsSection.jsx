@@ -1,9 +1,9 @@
 import React from 'react';
+import {Button} from "react-bootstrap";
 
 import styles from "./sweets.module.css";
 import sweetsTitle from "./sweetsTitle.jsx";
 import { sweetsData } from './sweetsTitle.jsx';
-import {Button} from "react-bootstrap";
 
 const randomNumber = Math.floor(Math.random() * 29);
 const randomData = Math.floor(Math.random() * 22);
@@ -11,8 +11,7 @@ const randomData = Math.floor(Math.random() * 22);
 function SweetSection(){
     return <div className={styles.sweetsCard}>
     <div className={styles.section} id="sweetCard">
-        <div style={{width:40+"%"}}>
-            <center>
+        <div style={{width:40+"%",textAlign:"center"}}>
                 <p className={styles.sweetTitle}>
                     {sweetsTitle[randomNumber]}
                 </p>
@@ -25,10 +24,9 @@ function SweetSection(){
                 >
                     Read More
                 </Button>
-            </center>
         </div>
         <div>
-            <img src={sweetsData[randomData].imageUrl} alt="Random Sweet Image" className={styles.sweetImage}/>
+            <img src={sweetsData[randomData].imageUrl} alt="" className={styles.sweetImage}/>
         </div>
     </div>
 </div>

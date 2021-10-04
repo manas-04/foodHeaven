@@ -6,6 +6,8 @@ import Footer from "./footer";
 
 function MainDiv(props){
 
+    // const randomImage = Images[Math.floor(Math.random() * 3)];
+
     const [search,setSearch] = useState("");
     const history = useHistory();
 
@@ -14,10 +16,10 @@ function MainDiv(props){
     }
 
     function searchFormSubmission(){
-            history
-                .push("/search", {
-                    searchedItem:search,
-                });
+        history
+            .push("/search", {
+                searchedItem:search,
+            });
     }
 
     return(<div className="bodyDiv">  
@@ -30,6 +32,7 @@ function MainDiv(props){
                         <img 
                             src="./images/close.svg" 
                             onClick={props.changeVisibility}
+                            alt=""
                         />
                     </div>
                 </div>
@@ -49,7 +52,7 @@ function MainDiv(props){
                                     className="searchIcon"
                                     type="submit"
                                 >
-                                    <img src="./images/search.svg" />
+                                    <img src="./images/search.svg" alt=""/>
                                 </Button>
                             </InputGroup>
                         </form>
@@ -58,7 +61,7 @@ function MainDiv(props){
             :<div><h1 className="mainHeading">Welcome to the Home of Delicious Recipes</h1>
                 {/* <form> */}
                     <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
-                        <img src="./images/search.svg" />
+                        <img src="./images/search.svg" alt="" />
                     </button>
                 {/* </form> */}
             </div>

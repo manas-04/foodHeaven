@@ -6,7 +6,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 
 import DialogTitle from '@mui/material/DialogTitle';
-import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
+import { Nav, Navbar, Container } from 'react-bootstrap';
 import styles from "./navbar.module.css";
 
 function CustomNavbar(props) {
@@ -16,11 +16,11 @@ function CustomNavbar(props) {
       <Navbar expand="lg" sticky="top" style={{ width: "85%" }}>
         <Container style={{ marginLeft: "4%" }}>
           <Navbar.Brand onClick={props.changeVisibility}>
-            <img className={styles.menu} src="./images/menu.svg" />
+            <img className={styles.menu} src="./images/menu.svg" alt=""/>
             <p className={styles.menuText}>MENU</p>
           </Navbar.Brand>
           <Nav>
-            <Nav.Link href="#home"><img className={styles.logo} src="./images/icon.svg" />
+            <Nav.Link href="#home"><img className={styles.logo} src="./images/icon.svg" alt="" />
               <p className={styles.logoText}>foodHeaven</p>
             </Nav.Link>
           </Nav>
@@ -50,19 +50,17 @@ function CustomNavbar(props) {
           <DialogTitle
             style={{ display: "flex",
             alignSelf: "flex-start",
-            marginLeft: "250px",
+            marginLeft: "230px",
             fontWeight:"bold",
             fontFamily:"ubuntu" ,
             fontSize:24,
             color:"wheat"
             }}
           >Type To Search</DialogTitle>
-          <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "30px", position: "relative"}}>
+          <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "10px", position: "relative"}}>
             <TextField
               autoFocus
               margin="dense"
-              id="name"
-              type="email"
               fullWidth
               variant="standard"
               placeholder="Search Recipes"
@@ -85,16 +83,16 @@ function CustomNavbar(props) {
         <Container className={styles.navText}>
           <Nav className="me-auto justify-content-between w-100 " >
             <Nav.Link href="#categories" className={styles.text}>Categories
-              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+              <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
             <Nav.Link href="#link" className={styles.text}>Favouried
-              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+              <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
-            <Nav.Link href="#home">About Us
-              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+            <Nav.Link href="#article">Articles
+              <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
             <Nav.Link href="#link">Features
-              <img className={styles.arrow} src="./images/arrow_forward.svg" />
+              <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
           </Nav>
         </Container>

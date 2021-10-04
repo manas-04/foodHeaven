@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import axios from 'axios';
 
 import ArticleCard from "./articleCard";
 import styles from "./articleCard.module.css";
@@ -19,8 +18,7 @@ function ArticleSection(){
        setData(recipes.slice(random, random+4));
     };
 
-    return<section style={{paddingTop:20,backgroundColor:"rgb(233, 233, 233)"}} id="article">
-    <center>
+    return<section style={{paddingTop:20,backgroundColor:"rgb(233, 233, 233)",textAlign:"center"}} id="article">
         <h5 style={{fontSize:34,fontWeight:300}}>Articles</h5>
         <hr className={styles.hr}/>
         <div>
@@ -29,6 +27,7 @@ function ArticleSection(){
         <div style={{width:100+"%"}}>
             {Data.map((recipe)=>{
                 return <ArticleCard 
+                    key={recipe.title}
                     title={recipe.title}
                     description={recipe.description}
                     imageUrl={recipe.imageUrl}
@@ -36,8 +35,7 @@ function ArticleSection(){
                 />
             })}
         </div>
-    </center>
-</section>
+    </section>
 }
 
 export default ArticleSection;

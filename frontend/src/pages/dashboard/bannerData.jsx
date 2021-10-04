@@ -1,23 +1,31 @@
  const images = [
     {
-      label: 'San Francisco – Oakland Bay Bridge, United States',
+      label: 'Burger-Bringing heat to your meat',
       imgPath:
-        'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+        'https://images.pexels.com/photos/2983098/pexels-photo-2983098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      recipePath:
+        'https://spoonacular.com/tex-mex-burger-663050'
     },
     {
-      label: 'This is a Random Text',
+      label: 'Samosa the Pyramid of Taste',
       imgPath:
-        'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+        'https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        recipePath:
+        'https://spoonacular.com/baked-indian-samosas-633650'
     },
     {
-      label: 'Bali, Indonesia',
+      label: 'Cravings can never be stopped without noodles',
       imgPath:
-        'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+       'https://images.pexels.com/photos/2347311/pexels-photo-2347311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+       recipePath:
+       'https://spoonacular.com/asian-noodles-632854'
     },
     {
-      label: 'Goč, Serbia',
+      label: 'Salsa. Like Never Before',
       imgPath:
-        'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+        'https://www.femmefiestaclub.com/wp-content/uploads/2019/07/shutterstock_294979184.jpg?auto=format&fit=crop&w=400&h=250&q=60',
+        recipePath:
+        'https://spoonacular.com/salsa-715870'
     },
   ];
 
