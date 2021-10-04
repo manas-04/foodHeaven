@@ -27,17 +27,17 @@ function SearchPage(){
     });
 
     const getData = async () => {
-        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&number=3")
+        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey="+ apiKey +"&number=3")
         .then((res)=>{
             setSearchedItems(res.data.results);
             setTotalRecipe(res.data.totalResults);
             setTimeout(() => {
                 setLoading(false);
-            }, 1000);
+            }, 2000);
         }).catch((error) => {
             console.log(error);
             setTimeout(() => {
-                setLoading(true);
+                setLoading(false);
             }, 1000);
             history.replace("/error");         
         }); 

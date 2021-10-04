@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Form , Row , Col , Button} from "react-bootstrap";
 import axios from "axios";
 import { useHistory } from "react-router";
+import { useAlert } from 'react-alert';
 
 import styles from "./registerPage.module.css";
 
 function SignUpForm(){
 
     const history = useHistory();
-    const [response,setResponse] = useState();
+    const alert = useAlert();
     const [userDetails,setUserDetails] = useState({
         firstName:"",
         lastName:"",
@@ -33,17 +34,18 @@ function SignUpForm(){
         await axios.post(`/user/signUp`,{
             user:userDetails
         }).then((res)=>{
-            setResponse(res.data.msg);
             console.log(res.status);
             if(res.status == 200){
-                history.push("/dashboard");
+                alert.success(res.data.msg);
+            }else if(res.status == 201){
+                alert.show(res.data.msg);
             }else{
                 history.push("/error");
             }
-
         }).catch((error) => {
             console.log(error);     
         });
+        
     }
     
     return <center className={styles.formCard} >

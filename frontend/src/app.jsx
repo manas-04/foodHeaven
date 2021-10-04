@@ -4,6 +4,7 @@ import {
     Switch,
     Route
   } from "react-router-dom";
+
 import MainPage from "./pages/mainPage/completeContent";
 import LoginPage from "./pages/loginPage/loginPage";
 import RegisterPage from "./pages/registerPage/registerPage";
@@ -13,6 +14,7 @@ import SearchPage from "./pages/searchRecipePage/searchRecipe";
 import ErrorPage from "./pages/errorPage/errorPage";
 
 function App(){
+
     return <div>
         <Router>
             <Switch>
