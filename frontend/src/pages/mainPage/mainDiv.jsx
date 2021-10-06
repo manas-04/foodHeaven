@@ -7,8 +7,6 @@ import NewRecipe from "./newRecipe";
 
 function MainDiv(props){
 
-    // const randomImage = Images[Math.floor(Math.random() * 3)];
-
     const [search,setSearch] = useState("");
     const history = useHistory();
 
@@ -60,11 +58,9 @@ function MainDiv(props){
                     </div>
                 </div> 
             :<div><h1 className="mainHeading">Welcome to the Home of Delicious Recipes</h1>
-                {/* <form> */}
-                    <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
-                        <img src="./images/search.svg" alt="" />
-                    </button>
-                {/* </form> */}
+                <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
+                    <img src="./images/search.svg" alt="" />
+                </button>
             </div>
         }
     </div>

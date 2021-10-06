@@ -37,6 +37,7 @@ function SearchPage(){
             setTimeout(() => {
                 setLoading(false);
             }, 1000);
+            history.replace("/error");
         }); 
     };
 

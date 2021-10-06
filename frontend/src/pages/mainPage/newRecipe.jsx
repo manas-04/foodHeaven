@@ -17,9 +17,9 @@ function NewRecipe(){
             <div className={styles.recipeContainer}>
             {
                 recipes.map((recipe)=>{
-                    return<a href={recipe.link} style={{color:"black"}}>
-                            <div className={styles.recipeCard}>
+                    return <div className={styles.recipeCard}>
                                 <div>
+                                <a href={recipe.link} style={{color:"black"}} className={styles.a}>
                                     <img 
                                         alt="" 
                                         src={recipe.image} 
@@ -30,12 +30,12 @@ function NewRecipe(){
                                     <p className={styles.cardHeading}>
                                         {recipe.title}
                                     </p>
-                                    <p className={styles.cardSubHeading}>
-                                        By : {recipe.by}
-                                    </p>
-                                </div>
+                                </a>
+                                <p className={styles.cardSubHeading}>
+                                    By : {recipe.by}
+                                </p>
                             </div>
-                        </a>
+                        </div> 
                     })
             }
             </div>

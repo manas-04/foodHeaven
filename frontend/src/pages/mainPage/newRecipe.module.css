@@ -1,5 +1,5 @@
 .div{
-    height: 360px;
+    height: 380px;
     padding-top: 10px;
     background-color: rgb(238, 238, 238);
 }
@@ -22,12 +22,14 @@
 .recipeContainer{
     padding-top: 25px;
     width: 100%;
+    padding-bottom: 25px;
 }
 
 .recipeCard{
     display: inline-flex;
     justify-content: space-between;
     margin: 0px 15px 0px 15px;
+    padding-bottom: 10px;
 }
 
 .cardHeading{
@@ -42,4 +44,8 @@
     font-size: 14px;
     margin-top: 0;
     color: rgb(133, 133, 133);
+}
+
+.a:hover{
+    text-decoration: underline;
 }
