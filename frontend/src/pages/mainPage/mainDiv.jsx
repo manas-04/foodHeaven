@@ -3,6 +3,7 @@ import {Button,InputGroup,FormControl} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 import Footer from "./footer";
+import NewRecipe from "./newRecipe";
 
 function MainDiv(props){
 
@@ -22,7 +23,7 @@ function MainDiv(props){
             });
     }
 
-    return(<div className="bodyDiv">  
+    return(<div><div className="bodyDiv">  
             {
             props.visible
             ?<div className="searchMainDiv">
@@ -66,7 +67,9 @@ function MainDiv(props){
                 {/* </form> */}
             </div>
         }
-        <Footer />
+    </div>
+    <NewRecipe />
+    <Footer />
     </div>);
 }
 

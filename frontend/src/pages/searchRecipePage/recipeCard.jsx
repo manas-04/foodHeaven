@@ -13,14 +13,20 @@ function RecipeCard(props){
 
     useEffect(() => {
         getData();
-    });
+    },[]);
 
     const getData = async () => {
-        const res = await axios.get("https://api.spoonacular.com/recipes/" + props.id + "/information?apiKey=4f798ddd3ec9486caa20502738eb32c4");
-        setServings(res.data.servings);
-        setHealthScore(res.data.spoonacularScore);
-        setDuration(res.data.readyInMinutes);
-        setSourceUrl(res.data.spoonacularSourceUrl);
+        await axios.get("https://api.spoonacular.com/recipes/" + props.id + "/information?apiKey=03a705e72ad342119bd4b5998af0ea97")
+        .then((res)=>{
+            setServings(res.data.servings);
+            setHealthScore(res.data.spoonacularScore);
+            setDuration(res.data.readyInMinutes);
+            setSourceUrl(res.data.spoonacularSourceUrl);
+            console.log("Child");
+        }).catch((error) => {
+            console.log(error);
+        }); 
+
     };
 
     return <a href={sourceUrl} style={{color:"black"}}>

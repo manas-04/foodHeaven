@@ -9,8 +9,6 @@ import styles from "./search.module.css";
 import RecipeCard from './recipeCard';
 import Footer from "./footer";
 
-// import LoadingScreen from './loadingComponent';
-
 function SearchPage(){
 
     const [searchedItems,setSearchedItems] = useState([]);
@@ -20,26 +18,25 @@ function SearchPage(){
     const history = useHistory();
     const Location = useLocation();
     const query = Location.state.searchedItem;
-    const apiKey="4f798ddd3ec9486caa20502738eb32c4";
+    const apiKey="03a705e72ad342119bd4b5998af0ea97";
 
     useEffect(() => {
         getData();
-    });
+    },[]);
 
     const getData = async () => {
-        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey="+ apiKey +"&number=3")
+        await axios.get("https://api.spoonacular.com/recipes/complexSearch?query=" + query + "&apiKey=" + apiKey +"&number=3")
         .then((res)=>{
-            setSearchedItems(res.data.results);
-            setTotalRecipe(res.data.totalResults);
             setTimeout(() => {
                 setLoading(false);
-            }, 2000);
+            }, 1000);
+            setSearchedItems(res.data.results);
+            setTotalRecipe(res.data.totalResults);
         }).catch((error) => {
             console.log(error);
             setTimeout(() => {
                 setLoading(false);
             }, 1000);
-            history.replace("/error");         
         }); 
     };
 

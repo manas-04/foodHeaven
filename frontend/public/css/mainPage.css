@@ -31,7 +31,6 @@ a:hover{
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     padding: 2px 10px;
-    background-color: var(--secondary-bg-color);
 }
 
 .localNavItem{
@@ -51,13 +50,11 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    background-color: var(--secondary-bg-color);
 }
 
 .iconBtn{
     margin: 0px 5px 0px 10px;
     border-radius: 20px 20px 20px 20px;
-    background-color: var(--secondary-bg-color);
 }
 
 .iconBtn:hover{
@@ -96,17 +93,15 @@ a:hover{
 }
 
 .bodyDiv{
-    background-image: url("../images/pizza.png");
+    background-image: url("../images/paratha.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    position: absolute;
     width: 100%;
-    padding-top: 20%;
-    height: 135%;
+    padding-top: 27vh;
+    height: 85vh;
 }
 .localFooter {
     position: absolute;
-    bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
