@@ -1,10 +1,10 @@
 import React ,{useState,useEffect} from 'react';
 import { useHistory } from "react-router-dom";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { useAlert } from 'react-alert';
 import {BeatLoader} from "react-spinners";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import CustomNavbar from './navbar';
 import Footer from "./footer";
@@ -33,12 +33,12 @@ function Dashboard(props){
 	const handleClickOpen = () => {setOpen(!open);};
 
 	useEffect(() => {
-        getData();
+        checkLogin();
     },[]);
 
-    const getData = async () => {
+    const checkLogin = async () => {
         await axios.post(`user/validate`,{
-			token:localStorage.getItem("token")
+			token:localStorage.getItem("token"),
 		}).then((res)=>{
 			if(res.status === 200){
 				setTimeout(() => {
@@ -50,7 +50,7 @@ function Dashboard(props){
 			setTimeout(() => {
 				setLoading(false);
 				if(error.response.status === 403){
-					alert.error("Something went wrong, please, Login Again.");
+					alert.error("Please Login, to access this page.");
 					history.replace("/");
 				}else if(error.response.error === 500){
 					history.replace("/error");

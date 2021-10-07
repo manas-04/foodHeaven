@@ -67,6 +67,7 @@ function SignUpForm(){
                             placeholder="First Name" 
                             name="firstName"
                             onChange={InputHandler}
+                            required
                         />
                     </Form.Group>
 
@@ -77,6 +78,7 @@ function SignUpForm(){
                             placeholder="Last Name"
                             name="lastName"
                             onChange={InputHandler}
+                            required
                         />
                     </Form.Group>
                 </Row>
@@ -88,6 +90,7 @@ function SignUpForm(){
                     placeholder="E-mail" 
                     name="email"    
                     onChange={InputHandler}
+                    required
                 />
                 </Form.Group>
 
@@ -98,6 +101,7 @@ function SignUpForm(){
                     type="password" 
                     name="password"    
                     onChange={InputHandler}
+                    required
                 />
                 </Form.Group>
 
