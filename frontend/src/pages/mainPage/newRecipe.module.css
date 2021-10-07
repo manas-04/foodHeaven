@@ -1,0 +1,51 @@
+.div{
+    height: 380px;
+    padding-top: 10px;
+    background-color: rgb(238, 238, 238);
+}
+
+.headingDiv{
+    width: 80vw;
+}
+
+.heading{
+    font-size: 32px;
+    padding-top: 0;
+    font: 2.375rem/3.125rem "Source Serif Pro",serif;
+}
+
+.hr{
+    height: 2px;
+    border: 1px solid black;
+}
+
+.recipeContainer{
+    padding-top: 25px;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.recipeCard{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0px 15px 0px 15px;
+    padding-bottom: 10px;
+}
+
+.cardHeading{
+    padding-top: 15px;
+    width: 150px;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.cardSubHeading{
+    padding-top: 6px;
+    font-size: 14px;
+    margin-top: 0;
+    color: rgb(133, 133, 133);
+}
+
+.a:hover{
+    text-decoration: underline;
+}

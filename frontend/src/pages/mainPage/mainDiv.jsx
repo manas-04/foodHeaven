@@ -3,10 +3,9 @@ import {Button,InputGroup,FormControl} from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 import Footer from "./footer";
+import NewRecipe from "./newRecipe";
 
 function MainDiv(props){
-
-    // const randomImage = Images[Math.floor(Math.random() * 3)];
 
     const [search,setSearch] = useState("");
     const history = useHistory();
@@ -22,7 +21,7 @@ function MainDiv(props){
             });
     }
 
-    return(<div className="bodyDiv">  
+    return(<div><div className="bodyDiv">  
             {
             props.visible
             ?<div className="searchMainDiv">
@@ -59,14 +58,14 @@ function MainDiv(props){
                     </div>
                 </div> 
             :<div><h1 className="mainHeading">Welcome to the Home of Delicious Recipes</h1>
-                {/* <form> */}
-                    <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
-                        <img src="./images/search.svg" alt="" />
-                    </button>
-                {/* </form> */}
+                <button className="bodySearchBtn btn" onClick={props.changeVisibility}>
+                    <img src="./images/search.svg" alt="" />
+                </button>
             </div>
         }
-        <Footer />
+    </div>
+    <NewRecipe />
+    <Footer />
     </div>);
 }
 

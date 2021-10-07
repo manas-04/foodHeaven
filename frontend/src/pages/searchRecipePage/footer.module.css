@@ -1,33 +1,28 @@
 .logo{
-    position: absolute;
-    height: 56.26447296142578px;
-    width: 56.4310302734375px;
-    left: 47%;
-    top: 27.99951171875px;
+    position: relative;
+    top:-19%;
+    height: 60.26447296142578px;
+    width: 60.4310302734375px;
     border-radius: 0px;
-    margin-left: 10px;
+    margin-left: 13px;
 }
 .logoText{
-    position: absolute;
     height: 25.886598587036133px;
-    width: 125px;
-    left: 47.2%;
-    top: 80.11328125px;
     border-radius: null;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 800;
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 17px;
+    position: relative;
+    top:-24%;
     letter-spacing: -0.04em;
     color: #000000;
 }
 .line{
     position: absolute;
-    height: 1px;
     width: 89%;
     left: 80px;
-    top: 102px;
+    top: 107px;
     border-radius: 0px;
     background: #00000080;
 }
@@ -37,16 +32,15 @@
     top: 122px;
     border-radius: null;
     font-family: Montserrat;
-    font-size: 13px;
+    font-size: 14px;
     font-style: normal;
-    line-height: 110px;
     letter-spacing: -0.015em;
     text-align: left;
     font-weight: 700;
     color: #000000;
 }
 .navbar{
-    padding-bottom: 350px;
+    padding-bottom: 400px;
     background-color: #18A0FB;
     position:relative;
 }
@@ -55,7 +49,7 @@
     height: 203px;
     width: 699px;
     left: 25%;
-    top: 131px;
+    top: 145px;
     border-radius: 50px;
     background:#666666;
 }
@@ -86,7 +80,7 @@
     position: absolute;
     width: 142px;
     height: 42px;
-    left: 275px;
+    left: 270px;
     top: 138px;
     background: #18A0FB;
     border-radius: 6px;
@@ -115,7 +109,7 @@
     height: 24px;
     width: 309px;
     left: 40%;
-    top: 357px;
+    top: 380px;
     border-radius: null;
     font-family: Montserrat;
     font-size: 15px;

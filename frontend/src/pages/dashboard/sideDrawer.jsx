@@ -1,16 +1,41 @@
 import React from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import Zoom from "@material-ui/core/Zoom";
-
+import axios from "axios";
 import { Nav } from 'react-bootstrap';
 import {
 	DrawerNavigationHeader,
 	DrawerNavigation,
 } from 'react-bootstrap-drawer';
+import { useAlert } from 'react-alert';
+import { useHistory } from "react-router-dom";
 
 import styles from "./dashboardDrawer.module.css";
 
 function SideDrawer(props){
+
+	const alert = useAlert();
+	const history = useHistory();
+
+	const logoutHandler = async () => {
+		await axios.post(`user/logout`,{
+			token:localStorage.getItem("token"),
+		}).then((res)=>{
+			if(res.status === 200 ){
+				history.replace("/");
+				alert.success(res.data.msg);
+				localStorage.setItem('token',"");
+			}
+		}).catch((error)=>{
+			if(error.response.status === 500 || error.response.status === 409){
+				localStorage.setItem('token',"");
+				history.replace("/");
+				alert.success("Successfully Logged Out.");
+			}else if(error.response.status === 404){
+				alert.error("Invalid User.");
+			}
+		})
+	}
 
     function ListItem(props){
 		return <Nav.Item onClick={props.onClick}>
@@ -60,7 +85,12 @@ function SideDrawer(props){
 					<ListItem redirectLink="/" imageUrl="./images/profile.svg" Item="Manage Profile" onClick={props.changeVisibility}/>
 					<ListItem redirectLink="/" imageUrl="./images/feedback.svg" Item="Give Feedback" onClick={props.changeVisibility}/>
 					<ListItem redirectLink="/" imageUrl="./images/question-answer-5528.svg" Item="About Us" onClick={props.changeVisibility}/>
-					<ListItem redirectLink="/" imageUrl="./images/logout.svg" Item="Sign Out" onClick={props.changeVisibility}/>
+					<Nav.Item onClick={props.changeVisibility}>
+						<Nav.Link className={styles.sideDrawerText} onClick={logoutHandler}>
+							<img src="./images/logout.svg" className={styles.sideDrawerImages} alt="" />
+							Sign Out
+						</Nav.Link>
+					</Nav.Item>
 					<center>
 						<hr 
 							className={styles.hr} 

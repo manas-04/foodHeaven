@@ -15,6 +15,7 @@ function SignUpForm(){
         lastName:"",
         email:"",
         password:"",
+        isLoggedIn:false,
     }); 
 
     function InputHandler(event){
@@ -39,11 +40,15 @@ function SignUpForm(){
                 alert.success(res.data.msg);
             }else if(res.status == 201){
                 alert.show(res.data.msg);
-            }else{
-                history.push("/error");
             }
         }).catch((error) => {
-            console.log(error);     
+            if(error.response.status === 401){
+                alert.error("Invalid Email or Password");
+            }else if(error.response.status === 404){
+                alert.error("User Not Found");
+            }else if(error.response.error === 500){
+                history.push("/error");
+            }     
         });
         
     }
@@ -62,6 +67,7 @@ function SignUpForm(){
                             placeholder="First Name" 
                             name="firstName"
                             onChange={InputHandler}
+                            required
                         />
                     </Form.Group>
 
@@ -72,6 +78,7 @@ function SignUpForm(){
                             placeholder="Last Name"
                             name="lastName"
                             onChange={InputHandler}
+                            required
                         />
                     </Form.Group>
                 </Row>
@@ -83,6 +90,7 @@ function SignUpForm(){
                     placeholder="E-mail" 
                     name="email"    
                     onChange={InputHandler}
+                    required
                 />
                 </Form.Group>
 
@@ -93,6 +101,7 @@ function SignUpForm(){
                     type="password" 
                     name="password"    
                     onChange={InputHandler}
+                    required
                 />
                 </Form.Group>
 
