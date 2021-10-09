@@ -68,10 +68,10 @@ function Dashboard(props){
 	}
   
 	function handleClose(){
-		history
-			.push("/search", {
+		history.push("/search",{
 				searchedItem: searchedItem,
-			});
+			}
+		);
 		window.location.reload();
 	};
 

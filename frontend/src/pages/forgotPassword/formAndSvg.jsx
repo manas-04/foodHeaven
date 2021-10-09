@@ -27,7 +27,6 @@ function FormAndSvg(){
 
     async function formSubmission(event){
         event.preventDefault();
-
         await axios.post(`user/forgotPassword`,{
             user:userDetails
         }).then((res)=>{

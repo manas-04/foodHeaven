@@ -17,7 +17,7 @@ function Footer() {
 						</div>
 						<Nav.Link href="#features" className={styles.footerText}>ABOUT US</Nav.Link>
 						<Nav.Link href="#home" className={styles.footerText}>CONTACT US</Nav.Link>
-						<Nav.Link href="#pricing" className={styles.footerText}>GIVE FEEDBACK</Nav.Link>
+						<Nav.Link href="/feedback" className={styles.footerText}>FEEDBACK</Nav.Link>
 					</Nav>
 				</Container>
 				<hr className={styles.line}></hr>
