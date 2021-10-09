@@ -107,7 +107,6 @@ function Dashboard(props){
 				<Footer />
 			</div>
 		}
-		
 	</div>)
 }
 
