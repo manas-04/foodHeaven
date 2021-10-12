@@ -45,8 +45,6 @@ function FormAndSvg(){
         });
     }   
 
-
-
     return <center className={styles.formCard}>
         <div style={{display:"inline-flex"}}>
             <img src="images/forgot-password-animate.svg" className={styles.image} alt="" />

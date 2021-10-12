@@ -147,8 +147,8 @@ module.exports.forgotPassword = (req, res) => {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "foodHeaven022@gmail.com",
-            pass: "aryanManas@22",
+            user: process.env.MAIL,
+            pass: process.env.PASSWORD,
         },
     });
 
