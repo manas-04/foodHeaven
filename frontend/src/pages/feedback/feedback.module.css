@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
     padding-top: 3vw;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+    background-color:rgb(24, 120, 175);
 }
 
 .container{

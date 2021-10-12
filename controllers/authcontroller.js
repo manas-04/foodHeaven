@@ -152,17 +152,8 @@ module.exports.forgotPassword = (req, res) => {
         },
     });
 
-    const options = {
-        from: "foodHeaven022@gmail.com",
-        to: user.email,
-        subject: "foodHeaven Password Reset",
-        html: `<p>You have requested for the password reset.</p>
-        <p>Click here to set a new password.</p>`,
-        // <p>Click <a href='${process.env.FRONTEND_URL}/reset/${resetToken}'> here</a> to set a password.</p>`,
-    }
-
-    try{
-        usersModal.findOne({email: user.email}, function (err, foundUser) {
+    try {
+        usersModal.findOne({ email: user.email }, function (err, foundUser) {
             if (err) {
                 return res.status(500).json({
                     msg: "Something Went Wrong",
@@ -170,23 +161,44 @@ module.exports.forgotPassword = (req, res) => {
             }
             else {
                 if (foundUser) {
-                    transporter.sendMail(options, function (err, info) {
-                        if (err){
-                            console.log(err);
+                    const resetToken = jwt.sign({ _id: foundUser._id }, process.env.REFRESH_TOKEN_SECRET, { expiresIn: "5min" });
+                    if (!resetToken) {
+                        return res.status(500).json({
+                            msg: "Internal server error.",
+                        });
+                    }
+                    foundUser.resetToken = resetToken;
+                    foundUser.save(function (err) {
+                        if (!err) {
+                            const options = {
+                                from: "foodHeaven022@gmail.com",
+                                to: user.email,
+                                subject: "foodHeaven Password Reset",
+                                html: `<h2>You have requested for the password reset.</h2>
+                                <h5>Click <a href='${process.env.FRONTEND_URL}/resetPassword/${resetToken}'> <button style={{cursor:"pointer"}}> Reset Link </button></a> to set a password.</h5>
+                                <h4>The link Will be valid for 5 min.</h4>`,
+                            }
+                            transporter.sendMail(options, function (err, info) {
+                                if (err) {
+                                    console.log(err);
+                                    return;
+                                }else{
+                                    console.log("Sent" + info.response);
+                                    return res.status(200).json({
+                                        msg: "Email with instructions is sent on your mail.",
+                                    });
+                                }
+                            });
+                        } else {
                             return res.status(500).json({
                                 msg: "Internal server error.",
                             });
-                        }else{
-                            console.log("Sent" + info.response);
-                            return res.status(200).json({
-                                msg: "Email with instructions is sent on your mail.",
-                                // resetToken: resetToken
-                            });
                         }
                     });
+                    
                 } else {
                     return res.status(404).json({
-                        msg: "User not Found",
+                        msg: "This Email is not Registered.",
                     });
                 }
             }
@@ -199,54 +211,86 @@ module.exports.forgotPassword = (req, res) => {
 }
 
 module.exports.resetPassword = (req, res) => {
+
+    const resetToken = req.body.resetToken;
     const user = req.body.user;
 
     try {
-        usersModal.findOne({ email: user.email }, function (err, foundUser) {
-            if (err) {
-                return res.status(500).json({
-                    msg: "Something went Wrong"
-                });
-            }
-            else {
-                if (foundUser) {
-                    bcrypt.hash(user.password, saltRounds, function (err, hash) {
+        if (resetToken) {
+            jwt.verify(resetToken, process.env.REFRESH_TOKEN_SECRET, function (err) {
+                if (err) {
+                    return res.status(408).json({
+                        msg: "Session Expired.Try Again",
+                    });
+                } else {
+                    usersModal.findOne({resetToken}, function (err, foundUser) {
                         if (err) {
                             return res.status(500).json({
-                                msg: "Something Went Wrong"
+                                msg: "Something went Wrong"
                             });
                         }
                         else {
-                            foundUser.password = hash;
-                            foundUser.save(function (err) {
-                                if (err) {
-                                    return res.status(500).json({
-                                        msg: "Something Went Wrong"
+                            if (foundUser) {
+                                if (user.New_Password === user.Confirm_Password) {
+                                    bcrypt.compare(user.New_Password, foundUser.password, function (err, result) {
+                                        if(result==true)
+                                        {
+                                            return res.status(401).json({
+                                                msg:"Cannot use previous Passwords. Try Again."
+                                            });
+                                        }
+                                        else{
+                                    bcrypt.hash(user.New_Password, saltRounds, function (err, hash) {
+                                        if (err) {
+                                            return res.status(500).json({
+                                                msg: "Something Went Wrong"
+                                            });
+                                        }
+                                        else {
+                                            foundUser.password = hash;
+                                            foundUser.save(function (err) {
+                                                if (err) {
+                                                    return res.status(500).json({
+                                                        msg: "Something Went Wrong"
+                                                    });
+                                                }
+                                                else {
+                                                    return res.status(200).json({
+                                                        msg: "Password Reset Successfully"
+                                                    });
+                                                }
+                                            });
+                                        }
                                     });
                                 }
-                                else {
-                                    return res.status(200).json({
-                                        msg: "Password Reset Successfully"
+                                });
+                                } else {
+                                    return res.status(401).json({
+                                        msg: "Password didn't match.Please try Again",
                                     });
                                 }
-                            });
+                            }
+                            else {
+                                return res.status(404).json({
+                                    msg: "User not Found"
+                                });
+                            }
                         }
                     });
+
                 }
-                else {
-                    return res.status(404).json({
-                        msg: "User not Found"
-                    });
-                }
-            }
-        });
+            })
+        } else {
+            return res.status(401).json({
+                msg: "Authentication Error!!"
+            });
+        }
     } catch (err) {
         return res.status(500).json({
             msg: err
         });
     }
 }
-
 module.exports.logout = (req,res) => {
     
     jwt.verify(req.body.token,process.env.SECRET_KEY,function(err,result){

@@ -1,0 +1,40 @@
+.mainDiv{
+    padding: 2% 6% 0% 5%;
+    background-color: white;
+    border-radius: 24px;
+    height: 100%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.image{
+    height: 355px;
+    width:380px;
+}
+
+.form{
+    margin: 8% 30px 10px 130px;
+}
+
+.input{
+    width:380px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top:30px ;
+}
+
+.btn{
+    border-radius: 10px;
+    margin-left: 135px;
+}
+
+.page{
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-color:rgb(62, 180, 248);
+    padding: 3% 8% 6.5% 8%;
+}

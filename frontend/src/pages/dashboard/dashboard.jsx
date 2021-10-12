@@ -43,7 +43,7 @@ function Dashboard(props){
 			if(res.status === 200){
 				setTimeout(() => {
 					setLoading(false);
-					alert.success("Successfully Logged In");
+					alert.success("Successfully Logged In !!");
 				},1500);
 			}	
         }).catch((error) => {
