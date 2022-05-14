@@ -1,0 +1,31 @@
+{
+  "name": "foodheaven",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manas-04/foodHeaven.git"
+  },
+  "author": "Aryan and Manas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manas-04/foodHeaven/issues"
+  },
+  "homepage": "https://github.com/manas-04/foodHeaven#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.5.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8",
+    "nodemailer": "^6.6.5",
+    "nodemon": "^2.0.15"
+  }
+}

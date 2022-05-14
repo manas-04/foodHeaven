@@ -1,0 +1,46 @@
+.card{
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 8px 15px 8px 15px;
+}
+
+.article{
+    margin: 20px;
+    padding: 10px ;
+    box-shadow: 1px 1px 10px 1px rgb(202, 202, 202);
+    border-radius: 10px;
+    width: 500px;
+    height: 450px;
+    background-color: white;
+}
+
+.article:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 1px rgb(114, 114, 114);
+}
+
+.title{
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width:90%;
+}
+
+.title:hover{
+    text-decoration: underline;
+}
+
+.hr{
+    border: 1px solid black;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link{
+    color: black;
+}
