@@ -4,7 +4,6 @@ import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-
 import DialogTitle from '@mui/material/DialogTitle';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import styles from "./navbar.module.css";
@@ -40,10 +39,11 @@ function CustomNavbar(props) {
             ".MuiPaper-root": {
               maxWidth: 700,
               width: 700,
-              height: 150,
+              height: 180,
               alignItems: "center",
               borderRadius: 10,
               display: "inline-block",
+              overflowY:"hidden"
             }
           }}
         >
@@ -53,8 +53,7 @@ function CustomNavbar(props) {
             marginLeft: "230px",
             fontWeight:"bold",
             fontFamily:"ubuntu" ,
-            fontSize:24,
-            color:"wheat"
+            fontSize:26,
             }}
           >Type To Search</DialogTitle>
           <DialogContent style={{ display: "flex", alignContent: "center", width: "90%", marginLeft: "10px", position: "relative"}}>
@@ -63,7 +62,7 @@ function CustomNavbar(props) {
               margin="dense"
               fullWidth
               variant="standard"
-              placeholder="Search Recipes"
+              placeholder="Search Delicious Recipes"
               value={props.searchedItem}
               onChange={props.inputHandler}
             />
@@ -75,7 +74,7 @@ function CustomNavbar(props) {
           </DialogActions>
         </Dialog>
       </div>
-      <img className={styles.profile} src="./images/profile.svg" alt="Profile" />
+      <img className={styles.profile} src="./images/profile.svg" alt="Profile" onClick={props.handleManageProfile}/>
     </div>
     <hr className={styles.line}></hr>
     <div>
@@ -85,13 +84,13 @@ function CustomNavbar(props) {
             <Nav.Link href="#categories" className={styles.text}>Categories
               <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
-            <Nav.Link href="#link" className={styles.text}>Favouried
+            <Nav.Link href="/comingSoon" className={styles.text}>Favouried
               <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
             <Nav.Link href="#article">Articles
               <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
-            <Nav.Link href="#link">Features
+            <Nav.Link href="/comingSoon">Features
               <img className={styles.arrow} src="./images/arrow_forward.svg" alt=""/>
             </Nav.Link>
           </Nav>

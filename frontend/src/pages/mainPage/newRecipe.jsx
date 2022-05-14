@@ -17,7 +17,7 @@ function NewRecipe(){
             <div className={styles.recipeContainer}>
             {
                 recipes.map((recipe)=>{
-                    return <div className={styles.recipeCard}>
+                    return <div className={styles.recipeCard} key={recipe.link}>
                                 <div>
                                 <a href={recipe.link} style={{color:"black"}} className={styles.a}>
                                     <img 

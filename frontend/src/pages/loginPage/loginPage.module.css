@@ -4,9 +4,8 @@
 }
 
 .completePage{
-    display: flex;
+    display: inline-flex;
     background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
-
 }
 
 .loginArea{

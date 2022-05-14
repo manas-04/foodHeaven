@@ -31,20 +31,19 @@ function FormAndSvg(){
         await axios.post(`user/forgotPassword`,{
             user:userDetails
         }).then((res)=>{
-            console.log(res.status);
-            if(res.status == 200){
+            if(res.status === 200){
                 alert.success(res.data.msg);
             }
         }).catch((error) => {
-            console.log(error);    
-            if(error.response.status == 401){
-                alert.error("User not found.");
+            if(error.response.status === 404){
+                alert.error(error.response.data.msg);
             }else{
                 history.push("/error");
             } 
         });
-    }
-    
+    }   
+
+
 
     return <center className={styles.formCard}>
         <div style={{display:"inline-flex"}}>

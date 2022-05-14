@@ -21,8 +21,8 @@ export default class PreviousNextMethods extends Component {
     const settings = {
       dots: false,
       infinite: false,
-      speed: 500,
-      slidesToShow: 3,
+      speed: 600,
+      slidesToShow: 3.75,
       slidesToScroll: 1
     };
     return (

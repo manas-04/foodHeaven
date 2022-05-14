@@ -1,0 +1,53 @@
+#imageContainer{
+    text-align: center;
+}
+
+#img{
+    display: flex;
+    align-self: center;
+    border: 2px solid lightblue;
+    border-radius: 50%; 
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.details{
+    margin-left: 37%;
+}
+
+.page{
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-color:rgb(62, 180, 248);
+    padding: 2% 8% 6.5% 8%;
+}
+
+.container{
+    padding: 2% 6% 0% 5%;
+    background-color: white;
+    border-radius: 24px;
+    height: 100%;
+}
+
+.btn{
+    width: 10%;
+    display: flex;
+    align-self: center;   
+    margin-bottom: 20px; 
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.changebtn{
+    display: flex;
+    align-self: center;   
+    margin-bottom: 20px; 
+}
+
+
+

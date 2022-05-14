@@ -5,7 +5,7 @@ import styles from "./articleCard.module.css";
 function ArticleCard(props){
     return <div className={styles.card}>
         <center>
-            <a className={styles.link} href={props.url}>
+            <a className={styles.link} href={props.url} style={{color:"black",textDecoration:"none"}}>
                 <div className={styles.article}>
                     <img src={props.imageUrl} alt="" height={300} width={100+"%"} style={{objectFit:"cover"}}/>
                     <p className={styles.title}>

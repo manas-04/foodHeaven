@@ -13,6 +13,7 @@
     width: 99px;
     height: 46px;
     left: 0%;
+    top:2px;
     color: #000000;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
@@ -50,12 +51,13 @@
 .line{
     border-top: 1px solid #8c8b8b;
 	border-bottom: 0.5px solid #8c8b8b;
-    margin-top: 2px;
+    margin-top: 10px;
     margin-bottom: 0;
 }
 .mainDiv{
     height: 137px;
     width: 100%;
+    position: absolute;
     top:0;
     background:rgb(231, 231, 231); 
     z-index:-1;        
@@ -77,6 +79,13 @@
     border-radius: 5px;
     background: #050000;
     border-radius: 5px;
+    cursor: pointer;
+}
+.navbar{
+    padding-bottom: 0px;
+    padding-top: 4px;
+    padding-left:8px;
+    width: 100%;
 }
 .navText{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -98,5 +107,3 @@
     top: 0px;
     border-radius: 0px;
 }
-
-

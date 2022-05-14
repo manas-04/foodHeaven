@@ -12,6 +12,7 @@ function ArticleSection(){
 
     useEffect(() => {
         getData();
+        // eslint-disable-next-line
     }, []);
 
     const getData = () => {
@@ -19,7 +20,7 @@ function ArticleSection(){
     };
 
     return<section style={{paddingTop:20,backgroundColor:"rgb(233, 233, 233)",textAlign:"center"}} id="article">
-        <h5 style={{fontSize:34,fontWeight:300}}>Articles</h5>
+        <h5 style={{fontSize:38,fontWeight:500}}>Articles</h5>
         <hr className={styles.hr}/>
         <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
