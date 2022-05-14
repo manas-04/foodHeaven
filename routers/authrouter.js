@@ -9,7 +9,7 @@ router.post(`/user/signUp`,urlencodedParser, authController.signUp);
 router.post(`/user/login`,urlencodedParser, authController.logIn);
 router.post('/user/validate',urlencodedParser,authController.validate);
 router.post(`/user/forgotPassword`,urlencodedParser,authController.forgotPassword);
-router.post(`/user/resetPassword`,urlencodedParser,authController.resetPassword);
+router.post('/resetPassword/:resetToken',urlencodedParser,authController.resetPassword);
 router.post(`/user/logout`,urlencodedParser,authController.logout);
 
 module.exports = router;

@@ -26,8 +26,8 @@ function Footer(){
             <a className="localFooterItem footerLinks" href="">
                 Follow Us 
             </a>
-            <a className="localFooterItem" href="" style={{marginTop:12+ "px",marginBottom:10 + "px",marginRight:180+"px"}}>
-                Community 
+            <a className="localFooterItem" href="/feedback" style={{marginTop:12+ "px",marginBottom:10 + "px",marginRight:180+"px"}}>
+                Feedback 
             </a>
             <div className="btnSection">
                 <button className="btn localBtn" name="login" onClick={clickHandler}> 

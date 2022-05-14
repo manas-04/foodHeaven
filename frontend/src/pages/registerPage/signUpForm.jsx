@@ -31,26 +31,30 @@ function SignUpForm(){
 
     async function formSubmission(event){
         event.preventDefault();
+        // console.log(userDetails.password.length);
 
-        await axios.post(`/user/signUp`,{
-            user:userDetails
-        }).then((res)=>{
-            console.log(res.status);
-            if(res.status == 200){
-                alert.success(res.data.msg);
-            }else if(res.status == 201){
-                alert.show(res.data.msg);
-            }
-        }).catch((error) => {
-            if(error.response.status === 401){
-                alert.error("Invalid Email or Password");
-            }else if(error.response.status === 404){
-                alert.error("User Not Found");
-            }else if(error.response.error === 500){
-                history.push("/error");
-            }     
-        });
-        
+        if(userDetails.password.length <= 7){
+            alert.error("Password should be of at least 8 characters.");
+        }else{
+            await axios.post(`/user/signUp`,{
+                user:userDetails
+            }).then((res)=>{
+                console.log(res.status);
+                if(res.status == 200){
+                    alert.success(res.data.msg);
+                }else if(res.status == 201){
+                    alert.show(res.data.msg);
+                }
+            }).catch((error) => {
+                if(error.response.status === 401){
+                    alert.error("Invalid Email or Password");
+                }else if(error.response.status === 404){
+                    alert.error("User Not Found");
+                }else if(error.response.error === 500){
+                    history.push("/error");
+                }     
+            });
+        }
     }
     
     return <center className={styles.formCard} >

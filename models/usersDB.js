@@ -24,6 +24,9 @@ const userSchema = new mongoose.Schema(
         isLoggedIn:{
             type:Boolean
         },
+        resetToken:{
+            type:String
+        },
     }
 );
 

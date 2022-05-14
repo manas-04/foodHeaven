@@ -83,7 +83,12 @@ function SideDrawer(props){
 						/>
 					</center>
 					<ListItem redirectLink="/" imageUrl="./images/profile.svg" Item="Manage Profile" onClick={props.changeVisibility}/>
-					<ListItem redirectLink="/" imageUrl="./images/feedback.svg" Item="Give Feedback" onClick={props.changeVisibility}/>
+					<Nav.Item onClick={props.changeVisibility}>
+						<Nav.Link href="/feedback" className={styles.sideDrawerText}>
+							<img src="./images/feedback.svg" className={styles.sideDrawerImages} alt="" />
+							Give Feedback
+						</Nav.Link>
+					</Nav.Item>
 					<ListItem redirectLink="/" imageUrl="./images/question-answer-5528.svg" Item="About Us" onClick={props.changeVisibility}/>
 					<Nav.Item onClick={props.changeVisibility}>
 						<Nav.Link className={styles.sideDrawerText} onClick={logoutHandler}>

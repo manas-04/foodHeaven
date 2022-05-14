@@ -12,6 +12,9 @@ import ForgotPasswordPage from "./pages/forgotPassword/forgotPasswordPage";
 import Dashboard from "./pages/dashboard/dashboard";
 import SearchPage from "./pages/searchRecipePage/searchRecipe";
 import ErrorPage from "./pages/errorPage/errorPage";
+import ResetPasswordPage from "./pages/resetPassword/resetPasswordPage";
+import Error404 from "./pages/errorPage/error404";
+import FeedbackPage from "./pages/feedback/feedback";
 
 function App(){
 
@@ -25,6 +28,9 @@ function App(){
                 <Route path="/dashboard" component={Dashboard} />
                 <Route path="/search" render={(props)=><SearchPage {...props} />} />
                 <Route path="/error" component={ErrorPage} />
+                <Route path="/feedback" component={FeedbackPage} />
+                <Route path="/resetPassword/:resetToken" component={ResetPasswordPage} />
+                <Route path="/error404" component={Error404} />
             </Switch>
         </Router>
     </div>
