@@ -40,6 +40,9 @@ function SignUpForm() {
             }).then((res) => {
                 if (res.status === 200) {
                     alert.success(res.data.msg);
+                    setTimeout(() => {
+                        history.push('/login');
+                    }, 2000);
                 } else if (res.status === 201) {
                     alert.show(res.data.msg);
                 }

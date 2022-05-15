@@ -23,7 +23,7 @@ function ThankYou() {
                         <Button
                             className={styles.button}
                             onClick={() => {
-                                history.go(-1);
+                                history.push('/');
                             }}
                         >
                             <span id="GoBack">

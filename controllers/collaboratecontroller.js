@@ -62,6 +62,7 @@ module.exports.collaborate = (req, res) => {
                                                     }
                                                     transporter.sendMail(options, function (err, info) {
                                                         if (err) {
+                                                            console.log(err);
                                                             return res.status(500).json({
                                                                 msg: 'Something Went Wrong'
                                                             });
