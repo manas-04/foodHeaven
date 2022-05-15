@@ -34,7 +34,8 @@
 
 .remarkContainer{
     margin-top: 20vh;
-    margin-left: 6vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
 .thankYou{
@@ -84,4 +85,11 @@
 
 .button:hover{
     box-shadow: 10px 20px 36px #9b9b9b;
+}
+
+.thankYouimage {
+    height: 450px;
+    width: 550px;
+    margin-top: 8vh;
+    margin-left: 4vw;
 }
